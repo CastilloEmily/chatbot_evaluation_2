@@ -1,0 +1,201 @@
+2025-05-23 13:24:02,912 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-23\2025-05-23_13-24-02.log
+2025-05-23 13:24:02,914 [INFO] [main] Inicio del programa principal
+2025-05-23 13:24:02,914 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-23 13:24:02,962 [INFO] [change_settings] Iniciando proceso de actualización de settings de Web App...
+2025-05-23 13:24:02,963 [INFO] [azure.identity._credentials.environment] No environment configuration found.
+2025-05-23 13:24:02,963 [INFO] [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use IMDS
+2025-05-23 13:24:02,964 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-05-23 13:24:04,632 [INFO] [azure.identity._credentials.chained] DefaultAzureCredential acquired a token from AzureCliCredential
+2025-05-23 13:24:04,632 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings/list?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '6e28d2b1-37c8-11f0-ade3-24eb1694bf2d'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-05-23 13:24:05,917 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2729'
+    'Content-Type': 'application/json'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': 'ecf4c73f-3cdc-4624-9a38-77aac5ce5aa3'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-resource-requests': '11999'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 00747C46FBCA463993EFF6CA5117B83B Ref B: VIEEDGE2514 Ref C: 2025-05-23T11:24:04Z'
+    'Date': 'Fri, 23 May 2025 11:24:04 GMT'
+2025-05-23 13:24:05,918 [INFO] [change_settings] Configuración actual obtenida correctamente.
+2025-05-23 13:24:05,919 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings?api-version=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '2609'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '6febb75c-37c8-11f0-8b86-24eb1694bf2d'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-05-23 13:24:07,524 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2729'
+    'Content-Type': 'application/json'
+    'Expires': '-1'
+    'ETag': '"1DBCBD5287ABD4B"'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': 'ea6628a3-b17c-4b40-b9b2-23dcca27af33'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-writes': '199'
+    'x-ms-ratelimit-remaining-subscription-global-writes': 'REDACTED'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 01CAF7A04A2B4904811751CAB0B02D6D Ref B: VIEEDGE2514 Ref C: 2025-05-23T11:24:05Z'
+    'Date': 'Fri, 23 May 2025 11:24:06 GMT'
+2025-05-23 13:24:07,524 [INFO] [change_settings] Nuevas settings aplicadas correctamente.
+2025-05-23 13:24:07,525 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/restart?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '70e0c4a7-37c8-11f0-ac34-24eb1694bf2d'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-05-23 13:24:08,293 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': '06a2c3f9-1fdc-4db3-8a6c-7860c428af64'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-writes': '199'
+    'x-ms-ratelimit-remaining-subscription-global-writes': 'REDACTED'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: C6FBB98D161F49529C7DC78F69292CCF Ref B: VIEEDGE2514 Ref C: 2025-05-23T11:24:07Z'
+    'Date': 'Fri, 23 May 2025 11:24:07 GMT'
+    'Content-Length': '0'
+2025-05-23 13:24:08,294 [INFO] [change_settings] Reinicio de la Web App solicitado.
+2025-05-23 13:24:18,296 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '774c3eb9-37c8-11f0-b1db-24eb1694bf2d'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-05-23 13:24:18,969 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '8657'
+    'Content-Type': 'application/json'
+    'Expires': '-1'
+    'ETag': '"1DBCBD53204254B"'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': '86df6619-a25a-4568-b524-c803701815dc'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 972B224BBBE949E8B3A237D9664EFFF6 Ref B: VIEEDGE2514 Ref C: 2025-05-23T11:24:18Z'
+    'Date': 'Fri, 23 May 2025 11:24:17 GMT'
+2025-05-23 13:24:18,971 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings/list?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '77b347dc-37c8-11f0-9252-24eb1694bf2d'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-05-23 13:24:19,561 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2729'
+    'Content-Type': 'application/json'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': 'f43d0bdb-4199-424a-9752-14142f9a21a7'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-resource-requests': '11999'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 4906FE5789004AA4B938FB38038307CF Ref B: VIEEDGE2514 Ref C: 2025-05-23T11:24:18Z'
+    'Date': 'Fri, 23 May 2025 11:24:18 GMT'
+2025-05-23 13:24:19,562 [ERROR] [change_settings] Error: El valor de AZURE_OPENAI_TEMPERATURE no coincide. Esperado: 0.0, Obtenido: 0.0
+2025-05-23 13:24:19,562 [ERROR] [change_settings] Error durante la actualización de settings: Setting AZURE_OPENAI_TEMPERATURE no se actualizó correctamente. Esperado: 0.0, Obtenido: 0.0
+2025-05-23 13:24:19,562 [INFO] [main] Evaluando configuración 1/3072: {'AZURE_OPENAI_SYSTEM_MESSAGE': 'Mensaje sistema 1', 'AZURE_OPENAI_TEMPERATURE': 0.0, 'AZURE_OPENAI_TOP_P': 0.0, 'AZURE_OPENAI_MAX_TOKENS': 10, 'AZURE_SEARCH_STRICTNESS': 0, 'AZURE_SEARCH_TOP_K': 0}
+2025-05-23 13:24:19,563 [ERROR] [loader] Error de conexión con el servidor
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\loader.py", line 40, in send_question_to_target
+    response = requests.post(url, headers=headers, json=body, cookies=session_cookies, verify=False)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+    ~~~~~~~~~^
+        method=request.method.upper(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        hooks=merge_hooks(request.hooks, self.hooks),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\requests\models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\requests\models.py", line 438, in prepare_url
+    raise MissingSchema(
+    ...<2 lines>...
+    )
+requests.exceptions.MissingSchema: Invalid URL 'cookies': No scheme supplied. Perhaps you meant https://cookies?
+2025-05-23 13:24:19,565 [INFO] [evaluator] Creando QAEvaluator con model_config...
+2025-05-23 13:24:19,620 [INFO] [evaluator] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-23 13:24:21,046 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-23 13:24:21,939 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-23 13:24:22,054 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-23 13:24:22,063 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-23 13:24:22,455 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-23 13:24:22,460 [INFO] [evaluator] Evaluación completada para pregunta 'a'.
+2025-05-23 13:24:22,460 [ERROR] [main] Error en la ejecución principal: too many values to unpack (expected 6)
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 149, in main
+    for qid, label, question, expected, actual, context in send_question_to_target(questions_by_label, auth_mode):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 6)

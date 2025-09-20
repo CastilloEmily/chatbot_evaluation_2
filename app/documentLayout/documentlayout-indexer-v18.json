@@ -1,0 +1,42 @@
+{
+  "@odata.context": "https://search-ric-uat-v2.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DDBED1B6DABB59\"",
+  "name": "documentlayout-indexer-v18",
+  "description": null,
+  "dataSourceName": "chatric-idx-datasource-v3",
+  "skillsetName": "documentlayout-skillset-v18",
+  "targetIndexName": "documentlayout-index-v18",
+  "disabled": null,
+  "schedule": {
+    "interval": "P1D",
+    "startTime": "2025-06-26T10:16:42.734Z"
+  },
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "configuration": {
+      "dataToExtract": "contentAndMetadata",
+      "allowSkillsetToReadFileData": true,
+      "parsingMode": "default"
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "title_id",
+      "mappingFunction": {
+        "name": "base64Encode",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "/document/normalized_images/*/image_vector",
+      "targetFieldName": "image_vector",
+      "mappingFunction": null
+    }
+  ],
+  "outputFieldMappings": [],
+  "cache": null,
+  "encryptionKey": null
+}

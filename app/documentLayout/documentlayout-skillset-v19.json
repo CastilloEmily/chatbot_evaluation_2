@@ -1,0 +1,143 @@
+{
+  "@odata.etag": "\"0x8DDBECA6B41601A\"",
+  "name": "documentlayout-skillset-v19",
+  "description": "Intento de restructurar el contenido -->> split de markdowm",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Util.DocumentIntelligenceLayoutSkill",
+      "name": "#1",
+      "description": "Analizar el layout del documento",
+      "context": "/document",
+      "outputMode": "oneToMany",
+      "markdownHeaderDepth": "h6",
+      "outputFormat": "markdown",
+      "extractionOptions": [
+        "images"
+      ],
+      "inputs": [
+        {
+          "name": "file_data",
+          "source": "/document/file_data",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "markdown_document",
+          "targetName": "layout_markdown_document"
+        },
+        {
+          "name": "normalized_images",
+          "targetName": "normalized_images"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.SplitSkill",
+      "name": "split-layout-markdown",
+      "description": "Dividir el contenido markdown en chunks optimizados para embeddings",
+      "context": "/document/layout_markdown_document/*",
+      "defaultLanguageCode": "en",
+      "textSplitMode": "pages",
+      "maximumPageLength": 1000,
+      "pageOverlapLength": 150,
+      "maximumPagesToTake": 0,
+      "unit": "characters",
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/layout_markdown_document/*/content",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "textItems",
+          "targetName": "layout_chunks"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill",
+      "name": "#2",
+      "context": "/document/layout_markdown_document/*/layout_chunks/*",
+      "resourceUri": "https://tke4o.openai.azure.com",
+      "deploymentId": "text-embedding-ada-002",
+      "dimensions": 1536,
+      "modelName": "text-embedding-ada-002",
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/layout_markdown_document/*/layout_chunks/*",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "embedding",
+          "targetName": "text_vector"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.AIServicesByKey",
+    "description": "Conexión a Azure AI multi‑service en East US 2",
+    "key": "<redacted>",
+    "subdomainUrl": "https://multiservice-ric.cognitiveservices.azure.com/"
+  },
+  "indexProjections": {
+    "selectors": [
+      {
+        "targetIndexName": "documentlayout-index-v19",
+        "parentKeyFieldName": "text_document_id",
+        "sourceContext": "/document/layout_markdown_document/*/layout_chunks/*",
+        "mappings": [
+          {
+            "name": "chunk",
+            "source": "/document/layout_markdown_document/*/layout_chunks/*",
+            "inputs": []
+          },
+          {
+            "name": "h1",
+            "source": "/document/layout_markdown_document/*/sections/h1",
+            "inputs": []
+          },
+          {
+            "name": "h2",
+            "source": "/document/layout_markdown_document/*/sections/h2",
+            "inputs": []
+          },
+          {
+            "name": "h3",
+            "source": "/document/layout_markdown_document/*/sections/h3",
+            "inputs": []
+          },
+          {
+            "name": "h4",
+            "source": "/document/layout_markdown_document/*/sections/h4",
+            "inputs": []
+          },
+          {
+            "name": "h5",
+            "source": "/document/layout_markdown_document/*/sections/h5",
+            "inputs": []
+          },
+          {
+            "name": "h6",
+            "source": "/document/layout_markdown_document/*/sections/h6",
+            "inputs": []
+          },
+          {
+            "name": "text_vector",
+            "source": "/document/layout_markdown_document/*/layout_chunks/*/text_vector/*",
+            "inputs": []
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "projectionMode": "skipIndexingParentDocuments"
+    }
+  }
+}

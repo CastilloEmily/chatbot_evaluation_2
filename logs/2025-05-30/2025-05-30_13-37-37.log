@@ -1,0 +1,19 @@
+2025-05-30 13:37:37,980 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-30\2025-05-30_13-37-37.log
+2025-05-30 13:37:37,981 [INFO] [main] Inicio del programa principal
+2025-05-30 13:37:37,981 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-30 13:37:37,982 [INFO] [main] Generando combinaciones de parámetros desde: configs/settings_ranges.yaml
+2025-05-30 13:37:37,999 [INFO] [main] Cargando combinaciones de parámetros desde archivo YAML: configs/settings_ranges.yaml
+2025-05-30 13:37:37,999 [INFO] [main] Se generaron 3 combinaciones de parámetros.
+2025-05-30 13:37:38,005 [ERROR] [main] Error en la ejecución principal: update_webapp_settings() missing 1 required positional argument: 'mode'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 266, in main
+        update_webapp_settings(
+        ~~~~~~~~~~~~~~~~~~~~~~^
+            subscription_id=env_vars["SUBSCRIPTION_ID"],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+            new_settings=combination
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: update_webapp_settings() missing 1 required positional argument: 'mode'

@@ -1,0 +1,13 @@
+2025-05-26 13:50:11,991 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_13-50-11.log
+2025-05-26 13:50:11,992 [INFO] [main] Inicio del programa principal
+2025-05-26 13:50:11,992 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 13:50:11,994 [ERROR] [main] Error en la ejecución principal: 'list' object has no attribute 'items'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 238, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 124, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 137, in evaluate_label
+    for question in questions.items():
+                    ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'

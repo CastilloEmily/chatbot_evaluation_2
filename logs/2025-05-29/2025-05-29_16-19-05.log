@@ -1,0 +1,8 @@
+2025-05-29 16:19:05,865 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-29\2025-05-29_16-19-05.log
+2025-05-29 16:19:05,866 [INFO] [main] Inicio del programa principal
+2025-05-29 16:19:05,866 [ERROR] [main] Error en la ejecución principal: 'builtin_function_or_method' object has no attribute 'time'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 259, in main
+    start_time = time.time()
+                 ^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'time'

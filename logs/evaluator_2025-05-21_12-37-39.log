@@ -1,0 +1,8 @@
+2025-05-21 12:37:39,147 [INFO] Creando QAEvaluator con model_config...
+2025-05-21 12:37:39,311 [INFO] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-21 12:37:41,163 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 12:37:41,865 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 12:37:41,941 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 12:37:42,416 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 12:37:42,736 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 12:37:42,739 [INFO] Evaluación completada para pregunta 'test1'.

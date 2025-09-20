@@ -1,0 +1,29 @@
+2025-05-26 14:57:33,873 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_14-57-33.log
+2025-05-26 14:57:33,874 [INFO] [main] Inicio del programa principal
+2025-05-26 14:57:33,874 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 14:57:39,189 [INFO] [loader] Latencia: 2.650 s
+2025-05-26 14:57:39,192 [INFO] [evaluator] [cq1] Creando QAEvaluator con model_config...
+2025-05-26 14:57:39,206 [INFO] [evaluator] [cq1] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-26 14:57:40,448 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:41,672 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:42,297 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:42,724 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:44,665 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:44,668 [INFO] [evaluator] [cq1] Evaluación completada correctamente.
+2025-05-26 14:57:52,306 [INFO] [loader] Latencia: 5.705 s
+2025-05-26 14:57:52,309 [INFO] [evaluator] [cq2] Creando QAEvaluator con model_config...
+2025-05-26 14:57:52,322 [INFO] [evaluator] [cq2] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-26 14:57:53,274 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:54,779 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:55,001 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:55,033 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:55,588 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:57:55,590 [INFO] [evaluator] [cq2] Evaluación completada correctamente.
+2025-05-26 14:57:55,591 [ERROR] [main] Error en la ejecución principal: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 236, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 120, in evaluate_combination
+    config_scores[config] = config_score
+    ~~~~~~~~~~~~~^^^^^^^^
+TypeError: unhashable type: 'dict'

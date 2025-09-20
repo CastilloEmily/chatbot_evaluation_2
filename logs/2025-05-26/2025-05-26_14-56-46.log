@@ -1,0 +1,24 @@
+2025-05-26 14:56:46,951 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_14-56-46.log
+2025-05-26 14:56:46,951 [INFO] [main] Inicio del programa principal
+2025-05-26 14:56:46,952 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 14:56:52,364 [INFO] [loader] Latencia: 2.681 s
+2025-05-26 14:56:52,366 [INFO] [evaluator] [cq1] Creando QAEvaluator con model_config...
+2025-05-26 14:56:52,376 [INFO] [evaluator] [cq1] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-26 14:56:53,705 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:56:55,571 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:56:55,833 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:56:56,050 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:56:56,412 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 14:56:56,416 [INFO] [evaluator] [cq1] Evaluación completada correctamente.
+2025-05-26 14:56:56,418 [ERROR] [main] Error en la ejecución principal: 'weighted_score'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 237, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 119, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 132, in evaluate_label
+    label_score = evaluate_question(question, config, label)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 183, in evaluate_question
+    weighted_scores.append(score["weighted_score"])
+                           ~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'weighted_score'

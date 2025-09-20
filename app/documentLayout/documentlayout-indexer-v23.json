@@ -1,0 +1,33 @@
+{
+  "@odata.context": "https://search-ric-uat-v2.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DDDE23556A752A\"",
+  "name": "documentlayout-indexer-v23",
+  "description": "Indexer para probar nombre del archivo que no ha estado funcionando",
+  "dataSourceName": "chatric-idx-datasource-v3",
+  "skillsetName": "documentlayout-skillset-v23",
+  "targetIndexName": "documentlayout-index-v23",
+  "disabled": null,
+  "schedule": null,
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "configuration": {
+      "parsingMode": "default",
+      "imageAction": "generateNormalizedImages",
+      "allowSkillsetToReadFileData": true,
+      "failOnUnsupportedContentType": false,
+      "failOnUnprocessableDocument": false
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "document",
+      "mappingFunction": null
+    }
+  ],
+  "outputFieldMappings": [],
+  "cache": null,
+  "encryptionKey": null
+}

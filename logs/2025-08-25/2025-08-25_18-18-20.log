@@ -1,0 +1,92 @@
+2025-08-25 18:18:20,054 [INFO] [root] Logging configurado. Archivo de log: logs\2025-08-25\2025-08-25_18-18-20.log
+2025-08-25 18:18:20,055 [INFO] [main] Inicio del programa principal
+2025-08-25 18:18:20,056 [INFO] [EmailReporter] Inicializando EmailReporter y cargando variables de entorno...
+2025-08-25 18:18:20,056 [INFO] [EmailReporter] Variables de entorno cargadas correctamente.
+2025-08-25 18:18:20,056 [INFO] [main] Inicio del proceso en modo: current
+2025-08-25 18:18:20,056 [INFO] [main] Modo 'current' seleccionado. Actualizando configuración actual del Web App.
+2025-08-25 18:18:20,056 [INFO] [change_settings] Inicio actualización settings de Web App 'ChatRic' en RG 'openAI', en subscription 'b29c9dac-08df-4427-9ddb-d50fca7bc22f'
+2025-08-25 18:18:20,061 [INFO] [azure.identity._credentials.environment] No environment configuration found.
+2025-08-25 18:18:20,064 [INFO] [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use IMDS
+2025-08-25 18:18:20,065 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.4 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-08-25 18:18:21,960 [INFO] [azure.identity._credentials.chained] DefaultAzureCredential acquired a token from AzureCliCredential
+2025-08-25 18:18:21,961 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings/list?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '1d7124c4-81cf-11f0-880c-8c3b4a0af541'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.4 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-08-25 18:18:22,548 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2689'
+    'Content-Type': 'application/json'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': '61e453e9-440a-4ba9-8ee8-3755c4308130'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-resource-requests': '799'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 7D0466C93B1D470B8CDB7680F9CC7A77 Ref B: PAR611100607036 Ref C: 2025-08-25T16:18:22Z'
+    'Date': 'Mon, 25 Aug 2025 16:18:21 GMT'
+2025-08-25 18:18:22,549 [INFO] [change_settings] Configuración actual obtenida correctamente.
+2025-08-25 18:18:22,549 [INFO] [change_settings] Modo 'current' activado. No se aplicarán cambios.
+2025-08-25 18:18:22,550 [INFO] [main] Configuración actual del Web App: {'AUTH_CLIENT_SECRET': '', 'AZURE_COSMOSDB_ACCOUNT': '', 'AZURE_COSMOSDB_CONVERSATIONS_CONTAINER': 'conversations', 'AZURE_COSMOSDB_DATABASE': 'db_conversation_history', 'AZURE_COSMOSDB_MONGO_VCORE_CONNECTION_STRING': '', 'AZURE_COSMOSDB_MONGO_VCORE_CONTAINER': '', 'AZURE_COSMOSDB_MONGO_VCORE_CONTENT_COLUMNS': '', 'AZURE_COSMOSDB_MONGO_VCORE_DATABASE': '', 'AZURE_COSMOSDB_MONGO_VCORE_FILENAME_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_INDEX': '', 'AZURE_COSMOSDB_MONGO_VCORE_TITLE_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_URL_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_VECTOR_COLUMNS': '', 'AZURE_OPENAI_EMBEDDING_ENDPOINT': '', 'AZURE_OPENAI_EMBEDDING_KEY': '', 'AZURE_OPENAI_EMBEDDING_NAME': '', 'AZURE_OPENAI_ENDPOINT': 'https://tke4o.openai.azure.com/', 'AZURE_OPENAI_MAX_TOKENS': '16384', 'AZURE_OPENAI_MODEL': 'tke4o', 'AZURE_OPENAI_MODEL_NAME': 'gpt-4o', 'AZURE_OPENAI_RESOURCE': 'tke4o', 'AZURE_OPENAI_STOP_SEQUENCE': '', 'AZURE_OPENAI_SYSTEM_MESSAGE': 'Mensaje sistema 2', 'AZURE_OPENAI_TEMPERATURE': '1.0', 'AZURE_OPENAI_TOP_P': '1.0', 'AZURE_SEARCH_CONTENT_COLUMNS': '', 'AZURE_SEARCH_ENABLE_IN_DOMAIN': 'false', 'AZURE_SEARCH_FILENAME_COLUMN': '', 'AZURE_SEARCH_INDEX': '', 'AZURE_SEARCH_KEY': '', 'AZURE_SEARCH_PERMITTED_GROUPS_COLUMN': '', 'AZURE_SEARCH_QUERY_TYPE': '', 'AZURE_SEARCH_SEMANTIC_SEARCH_CONFIG': '', 'AZURE_SEARCH_SERVICE': '', 'AZURE_SEARCH_STRICTNESS': '5', 'AZURE_SEARCH_TITLE_COLUMN': '', 'AZURE_SEARCH_TOP_K': '1000', 'AZURE_SEARCH_URL_COLUMN': '', 'AZURE_SEARCH_USE_SEMANTIC_SEARCH': 'false', 'AZURE_SEARCH_VECTOR_COLUMNS': '', 'DATASOURCE_TYPE': 'AzureCognitiveSearch', 'ELASTICSEARCH_CONTENT_COLUMNS': '', 'ELASTICSEARCH_EMBEDDING_MODEL_ID': '', 'ELASTICSEARCH_ENABLE_IN_DOMAIN': 'false', 'ELASTICSEARCH_ENCODED_API_KEY': '', 'ELASTICSEARCH_ENDPOINT': '', 'ELASTICSEARCH_FILENAME_COLUMN': '', 'ELASTICSEARCH_INDEX': '', 'ELASTICSEARCH_QUERY_TYPE': '', 'ELASTICSEARCH_STRICTNESS': '3', 'ELASTICSEARCH_TITLE_COLUMN': '', 'ELASTICSEARCH_TOP_K': '5', 'ELASTICSEARCH_URL_COLUMN': '', 'ELASTICSEARCH_VECTOR_COLUMNS': '', 'MONGODB_APP_NAME': '', 'MONGODB_COLLECTION_NAME': '', 'MONGODB_CONTENT_COLUMNS': '', 'MONGODB_DATABASE_NAME': '', 'MONGODB_ENABLE_IN_DOMAIN': 'false', 'MONGODB_ENDPOINT': '', 'MONGODB_FILENAME_COLUMN': '', 'MONGODB_INDEX_NAME': '', 'MONGODB_PASSWORD': '', 'MONGODB_STRICTNESS': '3', 'MONGODB_TITLE_COLUMN': '', 'MONGODB_TOP_K': '5', 'MONGODB_URL_COLUMN': '', 'MONGODB_USERNAME': '', 'MONGODB_VECTOR_COLUMNS': '', 'SCM_DO_BUILD_DURING_DEPLOYMENT': 'true', 'WEBSITE_HTTPLOGGING_RETENTION_DAYS': '2'}
+2025-08-25 18:18:22,572 [INFO] [loader] Latencia: 0.021 s
+2025-08-25 18:18:22,572 [ERROR] [loader] 405 Method Not Allowed. Métodos permitidos por el servidor: HEAD, GET, OPTIONS
+2025-08-25 18:18:22,573 [ERROR] [loader] URL usada: http://127.0.0.1:50505/
+2025-08-25 18:18:22,573 [ERROR] [loader] Error inesperado al enviar la pregunta
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\loader.py", line 108, in send_question_to_target
+    raise RuntimeError(f"Error HTTP 405 (Allow: {allow}). Revisa que la URL sea el endpoint POST correcto.")
+RuntimeError: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+2025-08-25 18:18:22,574 [WARNING] [main] ⚠️ Intento 1/3 fallido: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+2025-08-25 18:18:27,577 [INFO] [loader] Latencia: 0.002 s
+2025-08-25 18:18:27,577 [ERROR] [loader] 405 Method Not Allowed. Métodos permitidos por el servidor: HEAD, GET, OPTIONS
+2025-08-25 18:18:27,578 [ERROR] [loader] URL usada: http://127.0.0.1:50505/
+2025-08-25 18:18:27,578 [ERROR] [loader] Error inesperado al enviar la pregunta
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\loader.py", line 108, in send_question_to_target
+    raise RuntimeError(f"Error HTTP 405 (Allow: {allow}). Revisa que la URL sea el endpoint POST correcto.")
+RuntimeError: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+2025-08-25 18:18:27,579 [WARNING] [main] ⚠️ Intento 2/3 fallido: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+2025-08-25 18:18:32,600 [INFO] [loader] Latencia: 0.020 s
+2025-08-25 18:18:32,601 [ERROR] [loader] 405 Method Not Allowed. Métodos permitidos por el servidor: HEAD, GET, OPTIONS
+2025-08-25 18:18:32,601 [ERROR] [loader] URL usada: http://127.0.0.1:50505/
+2025-08-25 18:18:32,601 [ERROR] [loader] Error inesperado al enviar la pregunta
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\loader.py", line 108, in send_question_to_target
+    raise RuntimeError(f"Error HTTP 405 (Allow: {allow}). Revisa que la URL sea el endpoint POST correcto.")
+RuntimeError: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+2025-08-25 18:18:32,602 [WARNING] [main] ⚠️ Intento 3/3 fallido: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+2025-08-25 18:18:32,602 [ERROR] [main] ❌ Error tras 3 intentos: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+2025-08-25 18:18:32,602 [ERROR] [main] Error en la ejecución principal: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 293, in main
+    _ = evaluate_combination(current_settings)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 144, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 162, in evaluate_label
+    label_score = evaluate_question(question, config, label)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 185, in evaluate_question
+    response = try_send_question_with_retries(query)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 218, in try_send_question_with_retries
+    response = send_question_to_target(query)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\loader.py", line 159, in send_question_to_target
+    raise e
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\loader.py", line 108, in send_question_to_target
+    raise RuntimeError(f"Error HTTP 405 (Allow: {allow}). Revisa que la URL sea el endpoint POST correcto.")
+RuntimeError: Error HTTP 405 (Allow: HEAD, GET, OPTIONS). Revisa que la URL sea el endpoint POST correcto.
+2025-08-25 18:18:32,603 [INFO] [EmailReporter] Iniciando envío de reporte por correo.
+2025-08-25 18:18:33,840 [INFO] [EmailReporter] ✅ Correo enviado con éxito.

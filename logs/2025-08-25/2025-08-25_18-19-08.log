@@ -1,0 +1,141 @@
+2025-08-25 18:19:08,996 [INFO] [root] Logging configurado. Archivo de log: logs\2025-08-25\2025-08-25_18-19-08.log
+2025-08-25 18:19:08,996 [INFO] [main] Inicio del programa principal
+2025-08-25 18:19:08,997 [INFO] [EmailReporter] Inicializando EmailReporter y cargando variables de entorno...
+2025-08-25 18:19:08,997 [INFO] [EmailReporter] Variables de entorno cargadas correctamente.
+2025-08-25 18:19:08,997 [INFO] [main] Inicio del proceso en modo: current
+2025-08-25 18:19:08,997 [INFO] [main] Modo 'current' seleccionado. Actualizando configuración actual del Web App.
+2025-08-25 18:19:08,997 [INFO] [change_settings] Inicio actualización settings de Web App 'ChatRic' en RG 'openAI', en subscription 'b29c9dac-08df-4427-9ddb-d50fca7bc22f'
+2025-08-25 18:19:09,002 [INFO] [azure.identity._credentials.environment] No environment configuration found.
+2025-08-25 18:19:09,004 [INFO] [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use IMDS
+2025-08-25 18:19:09,004 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.4 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-08-25 18:19:10,939 [INFO] [azure.identity._credentials.chained] DefaultAzureCredential acquired a token from AzureCliCredential
+2025-08-25 18:19:10,939 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings/list?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '3a9cb644-81cf-11f0-b484-8c3b4a0af541'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.4 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-08-25 18:19:11,725 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2689'
+    'Content-Type': 'application/json'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': '2c2fb252-5d06-4fb6-8006-3d4faa3d7790'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-resource-requests': '799'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 96746A689B7A438897064E4E9CFF4EE5 Ref B: PAR611100603042 Ref C: 2025-08-25T16:19:11Z'
+    'Date': 'Mon, 25 Aug 2025 16:19:11 GMT'
+2025-08-25 18:19:11,725 [INFO] [change_settings] Configuración actual obtenida correctamente.
+2025-08-25 18:19:11,725 [INFO] [change_settings] Modo 'current' activado. No se aplicarán cambios.
+2025-08-25 18:19:11,726 [INFO] [main] Configuración actual del Web App: {'AUTH_CLIENT_SECRET': '', 'AZURE_COSMOSDB_ACCOUNT': '', 'AZURE_COSMOSDB_CONVERSATIONS_CONTAINER': 'conversations', 'AZURE_COSMOSDB_DATABASE': 'db_conversation_history', 'AZURE_COSMOSDB_MONGO_VCORE_CONNECTION_STRING': '', 'AZURE_COSMOSDB_MONGO_VCORE_CONTAINER': '', 'AZURE_COSMOSDB_MONGO_VCORE_CONTENT_COLUMNS': '', 'AZURE_COSMOSDB_MONGO_VCORE_DATABASE': '', 'AZURE_COSMOSDB_MONGO_VCORE_FILENAME_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_INDEX': '', 'AZURE_COSMOSDB_MONGO_VCORE_TITLE_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_URL_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_VECTOR_COLUMNS': '', 'AZURE_OPENAI_EMBEDDING_ENDPOINT': '', 'AZURE_OPENAI_EMBEDDING_KEY': '', 'AZURE_OPENAI_EMBEDDING_NAME': '', 'AZURE_OPENAI_ENDPOINT': 'https://tke4o.openai.azure.com/', 'AZURE_OPENAI_MAX_TOKENS': '16384', 'AZURE_OPENAI_MODEL': 'tke4o', 'AZURE_OPENAI_MODEL_NAME': 'gpt-4o', 'AZURE_OPENAI_RESOURCE': 'tke4o', 'AZURE_OPENAI_STOP_SEQUENCE': '', 'AZURE_OPENAI_SYSTEM_MESSAGE': 'Mensaje sistema 2', 'AZURE_OPENAI_TEMPERATURE': '1.0', 'AZURE_OPENAI_TOP_P': '1.0', 'AZURE_SEARCH_CONTENT_COLUMNS': '', 'AZURE_SEARCH_ENABLE_IN_DOMAIN': 'false', 'AZURE_SEARCH_FILENAME_COLUMN': '', 'AZURE_SEARCH_INDEX': '', 'AZURE_SEARCH_KEY': '', 'AZURE_SEARCH_PERMITTED_GROUPS_COLUMN': '', 'AZURE_SEARCH_QUERY_TYPE': '', 'AZURE_SEARCH_SEMANTIC_SEARCH_CONFIG': '', 'AZURE_SEARCH_SERVICE': '', 'AZURE_SEARCH_STRICTNESS': '5', 'AZURE_SEARCH_TITLE_COLUMN': '', 'AZURE_SEARCH_TOP_K': '1000', 'AZURE_SEARCH_URL_COLUMN': '', 'AZURE_SEARCH_USE_SEMANTIC_SEARCH': 'false', 'AZURE_SEARCH_VECTOR_COLUMNS': '', 'DATASOURCE_TYPE': 'AzureCognitiveSearch', 'ELASTICSEARCH_CONTENT_COLUMNS': '', 'ELASTICSEARCH_EMBEDDING_MODEL_ID': '', 'ELASTICSEARCH_ENABLE_IN_DOMAIN': 'false', 'ELASTICSEARCH_ENCODED_API_KEY': '', 'ELASTICSEARCH_ENDPOINT': '', 'ELASTICSEARCH_FILENAME_COLUMN': '', 'ELASTICSEARCH_INDEX': '', 'ELASTICSEARCH_QUERY_TYPE': '', 'ELASTICSEARCH_STRICTNESS': '3', 'ELASTICSEARCH_TITLE_COLUMN': '', 'ELASTICSEARCH_TOP_K': '5', 'ELASTICSEARCH_URL_COLUMN': '', 'ELASTICSEARCH_VECTOR_COLUMNS': '', 'MONGODB_APP_NAME': '', 'MONGODB_COLLECTION_NAME': '', 'MONGODB_CONTENT_COLUMNS': '', 'MONGODB_DATABASE_NAME': '', 'MONGODB_ENABLE_IN_DOMAIN': 'false', 'MONGODB_ENDPOINT': '', 'MONGODB_FILENAME_COLUMN': '', 'MONGODB_INDEX_NAME': '', 'MONGODB_PASSWORD': '', 'MONGODB_STRICTNESS': '3', 'MONGODB_TITLE_COLUMN': '', 'MONGODB_TOP_K': '5', 'MONGODB_URL_COLUMN': '', 'MONGODB_USERNAME': '', 'MONGODB_VECTOR_COLUMNS': '', 'SCM_DO_BUILD_DURING_DEPLOYMENT': 'true', 'WEBSITE_HTTPLOGGING_RETENTION_DAYS': '2'}
+2025-08-25 18:20:40,754 [INFO] [loader] Latencia: 89.024 s
+2025-08-25 18:20:40,754 [INFO] [evaluator] [cl1] Creando QAEvaluator con model_config...
+2025-08-25 18:20:40,819 [INFO] [evaluator] [cl1] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-25 18:20:40,821 [ERROR] [evaluator] [cl1] Fallo inesperado durante la evaluación: (UserError) QAEvaluator: Either 'conversation' or individual inputs must be provided.
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\evaluator.py", line 36, in evaluate_response
+    result = evaluator(
+        query=query,
+    ...<2 lines>...
+        ground_truth=ground_truth,
+    )
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_qa\_qa.py", line 142, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_common\_base_eval.py", line 132, in __call__
+    return async_run_allowing_running_loop(self._async_evaluator, **kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\promptflow\_utils\async_utils.py", line 96, in async_run_allowing_running_loop
+    return asyncio.run(_invoke_async_with_sigint_handler(async_func, *args, **kwargs))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\promptflow\_utils\async_utils.py", line 65, in _invoke_async_with_sigint_handler
+    return await async_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_common\_base_eval.py", line 519, in __call__
+    return await self._real_call(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_common\_base_eval.py", line 400, in _real_call
+    eval_input_list = self._convert_kwargs_to_eval_input(**kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_common\_base_eval.py", line 335, in _convert_kwargs_to_eval_input
+    raise EvaluationException(
+    ...<4 lines>...
+    )
+azure.ai.evaluation._exceptions.EvaluationException: (UserError) QAEvaluator: Either 'conversation' or individual inputs must be provided.
+2025-08-25 18:20:40,885 [ERROR] [main] Error en la ejecución principal: (UserError) QAEvaluator: Either 'conversation' or individual inputs must be provided.
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 293, in main
+    _ = evaluate_combination(current_settings)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 144, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 162, in evaluate_label
+    label_score = evaluate_question(question, config, label)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 187, in evaluate_question
+    score = evaluate_response(
+        qid=qid,
+    ...<4 lines>...
+        ground_truth=expected
+    )
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\evaluator.py", line 61, in evaluate_response
+    raise e  # Deja que .main lo capture y lo reporte por email
+    ^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\evaluator.py", line 36, in evaluate_response
+    result = evaluator(
+        query=query,
+    ...<2 lines>...
+        ground_truth=ground_truth,
+    )
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_qa\_qa.py", line 142, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_common\_base_eval.py", line 132, in __call__
+    return async_run_allowing_running_loop(self._async_evaluator, **kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\promptflow\_utils\async_utils.py", line 96, in async_run_allowing_running_loop
+    return asyncio.run(_invoke_async_with_sigint_handler(async_func, *args, **kwargs))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\promptflow\_utils\async_utils.py", line 65, in _invoke_async_with_sigint_handler
+    return await async_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_common\_base_eval.py", line 519, in __call__
+    return await self._real_call(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_common\_base_eval.py", line 400, in _real_call
+    eval_input_list = self._convert_kwargs_to_eval_input(**kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\AppData\Local\Programs\Python\Python313\Lib\site-packages\azure\ai\evaluation\_evaluators\_common\_base_eval.py", line 335, in _convert_kwargs_to_eval_input
+    raise EvaluationException(
+    ...<4 lines>...
+    )
+azure.ai.evaluation._exceptions.EvaluationException: (UserError) QAEvaluator: Either 'conversation' or individual inputs must be provided.
+2025-08-25 18:20:40,894 [INFO] [EmailReporter] Iniciando envío de reporte por correo.
+2025-08-25 18:20:42,124 [INFO] [EmailReporter] ✅ Correo enviado con éxito.

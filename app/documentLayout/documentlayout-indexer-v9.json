@@ -1,0 +1,69 @@
+{
+  "@odata.context": "https://search-ric-uat-v2.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DDB93B2BB5B13B\"",
+  "name": "documentlayout-indexer-v9",
+  "description": "Indexer para pasar layouts separados",
+  "dataSourceName": "chatric-idx-datasource-v3",
+  "skillsetName": "documentlayout-skillset-v9",
+  "targetIndexName": "documentlayout-index-v9",
+  "disabled": null,
+  "schedule": null,
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "configuration": {
+      "parsingMode": "default",
+      "imageAction": "generateNormalizedImages",
+      "allowSkillsetToReadFileData": true,
+      "failOnUnsupportedContentType": false,
+      "failOnUnprocessableDocument": false
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "file_name",
+      "mappingFunction": null
+    }
+  ],
+  "outputFieldMappings": [
+    {
+      "sourceFieldName": "/document/layout_markdown_document/*",
+      "targetFieldName": "layouts",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*",
+      "targetFieldName": "normalized_images",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*/ocr_text/*",
+      "targetFieldName": "ocr_text",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*/image_tags/*",
+      "targetFieldName": "image_tags",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*/image_description/*",
+      "targetFieldName": "image_description",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*/image_categories/*",
+      "targetFieldName": "image_categories",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*/image_objects/*",
+      "targetFieldName": "image_objects",
+      "mappingFunction": null
+    }
+  ],
+  "cache": null,
+  "encryptionKey": null
+}

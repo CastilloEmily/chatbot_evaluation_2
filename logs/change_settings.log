@@ -1,0 +1,93 @@
+2025-05-23 13:27:44,735 - change_settings - INFO - Inicio actualización settings de Web App 'ChatRic' en RG 'openAI'
+2025-05-23 13:27:48,385 - change_settings - INFO - Configuración actual obtenida correctamente.
+2025-05-23 13:27:49,608 - change_settings - INFO - Nueva configuración aplicada correctamente.
+2025-05-23 13:27:50,538 - change_settings - INFO - Solicitud de reinicio enviada.
+2025-05-23 13:27:50,538 - change_settings - INFO - Esperando a que la Web App esté en estado 'Running' (máximo 10 intentos)...
+2025-05-23 13:27:56,128 - change_settings - DEBUG - Estado actual de la Web App: 'Running' (Intento 1/10)
+2025-05-23 13:27:56,133 - change_settings - INFO - La Web App está en estado 'Running'.
+2025-05-23 13:27:57,409 - change_settings - INFO - Verificación completada: todos los parámetros aplicados correctamente.
+2025-05-23 13:27:57,410 - change_settings - INFO - ✅ Configuración aplicada y Web App reiniciada correctamente.
+2025-05-23 13:30:22,239 - change_settings - INFO - Inicio actualización settings de Web App 'ChatRic' en RG 'openAI'
+2025-05-23 13:30:24,744 - change_settings - INFO - Configuración actual obtenida correctamente.
+2025-05-23 13:30:26,423 - change_settings - INFO - Nueva configuración aplicada correctamente.
+2025-05-23 13:30:26,998 - change_settings - INFO - Solicitud de reinicio enviada.
+2025-05-23 13:30:26,999 - change_settings - INFO - Esperando a que la Web App esté en estado 'Running' (máximo 10 intentos)...
+2025-05-23 13:30:32,329 - change_settings - DEBUG - Estado actual de la Web App: 'Running' (Intento 1/10)
+2025-05-23 13:30:32,329 - change_settings - INFO - La Web App está en estado 'Running'.
+2025-05-23 13:30:32,993 - change_settings - ERROR - Setting 'AZURE_OPENAI_TEMPERATURE' no actualizado correctamente. Esperado: '0.0', Obtenido: '0.0'
+2025-05-23 13:30:32,993 - change_settings - ERROR - Error de lógica: Setting 'AZURE_OPENAI_TEMPERATURE' no actualizado correctamente. Esperado: '0.0', Obtenido: '0.0'
+2025-05-23 13:30:32,994 - change_settings - DEBUG - Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\change_settins.py", line 84, in update_webapp_settings
+    raise ValueError(err_msg)
+ValueError: Setting 'AZURE_OPENAI_TEMPERATURE' no actualizado correctamente. Esperado: '0.0', Obtenido: '0.0'
+
+2025-05-23 13:31:03,953 - change_settings - INFO - Inicio actualización settings de Web App 'ChatRic' en RG 'openAI'
+2025-05-23 13:31:07,092 - change_settings - INFO - Configuración actual obtenida correctamente.
+2025-05-23 13:31:08,630 - change_settings - INFO - Nueva configuración aplicada correctamente.
+2025-05-23 13:31:09,260 - change_settings - INFO - Solicitud de reinicio enviada.
+2025-05-23 13:31:09,260 - change_settings - INFO - Esperando a que la Web App esté en estado 'Running' (máximo 10 intentos)...
+2025-05-23 13:31:14,624 - change_settings - DEBUG - Estado actual de la Web App: 'Running' (Intento 1/10)
+2025-05-23 13:31:14,625 - change_settings - INFO - La Web App está en estado 'Running'.
+2025-05-23 13:31:15,479 - change_settings - INFO - Verificación completada: todos los parámetros aplicados correctamente.
+2025-05-23 13:31:15,479 - change_settings - INFO - ✅ Configuración aplicada y Web App reiniciada correctamente.
+2025-05-23 13:32:06,946 - change_settings - INFO - Inicio actualización settings de Web App 'ChatRic' en RG 'openAI'
+2025-05-23 13:32:09,862 - change_settings - INFO - Configuración actual obtenida correctamente.
+2025-05-23 13:32:11,047 - change_settings - INFO - Nueva configuración aplicada correctamente.
+2025-05-23 13:32:11,621 - change_settings - INFO - Solicitud de reinicio enviada.
+2025-05-23 13:32:11,622 - change_settings - INFO - Esperando a que la Web App esté en estado 'Running' (máximo 10 intentos)...
+2025-05-23 13:32:16,925 - change_settings - DEBUG - Estado actual de la Web App: 'Running' (Intento 1/10)
+2025-05-23 13:32:16,925 - change_settings - INFO - La Web App está en estado 'Running'.
+2025-05-23 13:32:17,364 - change_settings - INFO - Verificación completada: todos los parámetros aplicados correctamente.
+2025-05-23 13:32:17,365 - change_settings - INFO - ✅ Configuración aplicada y Web App reiniciada correctamente.
+2025-05-23 13:32:44,524 - change_settings - INFO - Inicio actualización settings de Web App 'ChatRic' en RG 'openAI'
+2025-05-23 13:32:46,669 - change_settings - ERROR - Error HTTP en Azure API: (InvalidSubscriptionId) The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22Z' is malformed or invalid.
+Code: InvalidSubscriptionId
+Message: The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22Z' is malformed or invalid.
+2025-05-23 13:32:46,675 - change_settings - DEBUG - Traceback (most recent call last):
+  File "c:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\change_settins.py", line 44, in update_webapp_settings
+    current_config = client.web_apps.list_application_settings(resource_group, webapp_name)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\tracing\decorator.py", line 119, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\mgmt\web\v2024_04_01\operations\_web_apps_operations.py", line 19214, in list_application_settings
+    raise HttpResponseError(response=response, model=error, error_format=ARMErrorFormat)
+azure.core.exceptions.HttpResponseError: (InvalidSubscriptionId) The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22Z' is malformed or invalid.
+Code: InvalidSubscriptionId
+Message: The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22Z' is malformed or invalid.
+
+2025-05-23 13:33:05,263 - change_settings - INFO - Inicio actualización settings de Web App 'ChatRic' en RG 'openAIS'
+2025-05-23 13:33:07,566 - change_settings - ERROR - Error HTTP en Azure API: (ResourceGroupNotFound) Resource group 'openAIS' could not be found.
+Code: ResourceGroupNotFound
+Message: Resource group 'openAIS' could not be found.
+2025-05-23 13:33:07,572 - change_settings - DEBUG - Traceback (most recent call last):
+  File "c:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\change_settins.py", line 44, in update_webapp_settings
+    current_config = client.web_apps.list_application_settings(resource_group, webapp_name)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\tracing\decorator.py", line 119, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\mgmt\web\v2024_04_01\operations\_web_apps_operations.py", line 19212, in list_application_settings
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\exceptions.py", line 163, in map_error
+    raise error
+azure.core.exceptions.ResourceNotFoundError: (ResourceGroupNotFound) Resource group 'openAIS' could not be found.
+Code: ResourceGroupNotFound
+Message: Resource group 'openAIS' could not be found.
+
+2025-05-23 13:37:05,508 - change_settings - INFO - Inicio actualización settings de Web App 'ChatRic' en RG 'openAI'
+2025-05-23 13:37:11,214 - change_settings - INFO - Configuración actual obtenida correctamente.
+2025-05-23 13:37:12,610 - change_settings - INFO - Nueva configuración aplicada correctamente.
+2025-05-23 13:37:13,065 - change_settings - INFO - Solicitud de reinicio enviada.
+2025-05-23 13:37:13,066 - change_settings - INFO - Esperando a que la Web App esté en estado 'Running' (máximo 10 intentos)...
+2025-05-23 13:39:07,840 - change_settings - INFO - Inicio actualización settings de Web App 'ChatRic' en RG 'openAI', en subscription 'b29c9dac-08df-4427-9ddb-d50fca7bc22f'
+2025-05-23 13:39:10,821 - change_settings - INFO - Configuración actual obtenida correctamente.
+2025-05-23 13:39:11,870 - change_settings - INFO - Nueva configuración aplicada correctamente.
+2025-05-23 13:39:12,590 - change_settings - INFO - Solicitud de reinicio enviada.
+2025-05-23 13:39:12,591 - change_settings - INFO - Esperando a que la Web App esté en estado 'Running' (máximo 10 intentos)...
+2025-05-23 13:39:18,104 - change_settings - DEBUG - Estado actual de la Web App: 'Running' (Intento 1/10)
+2025-05-23 13:39:18,105 - change_settings - INFO - La Web App está en estado 'Running'.
+2025-05-23 13:39:19,090 - change_settings - ERROR - Setting 'AZURE_OPENAI_TEMPERATURE' no actualizado correctamente. Esperado: '0.0', Obtenido: '0.0'
+2025-05-23 13:39:19,090 - change_settings - ERROR - Error de lógica: Setting 'AZURE_OPENAI_TEMPERATURE' no actualizado correctamente. Esperado: '0.0', Obtenido: '0.0'
+2025-05-23 13:39:19,091 - change_settings - DEBUG - Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\change_settins.py", line 84, in update_webapp_settings
+    raise ValueError(err_msg)
+ValueError: Setting 'AZURE_OPENAI_TEMPERATURE' no actualizado correctamente. Esperado: '0.0', Obtenido: '0.0'
+

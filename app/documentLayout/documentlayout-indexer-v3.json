@@ -1,0 +1,62 @@
+{
+  "@odata.context": "https://search-ric-uat-v2.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DDB5C2C56EEBEC\"",
+  "name": "documentlayout-indexer-v3",
+  "description": "prueba de documentlayout markdown con otros parametros",
+  "dataSourceName": "chatric-idx-datasource-v3",
+  "skillsetName": "documentlayout-skillset-v3",
+  "targetIndexName": "documentlayout-index-v3",
+  "disabled": null,
+  "schedule": null,
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "configuration": {
+      "parsingMode": "default",
+      "imageAction": "generateNormalizedImages",
+      "allowSkillsetToReadFileData": true,
+      "failOnUnsupportedContentType": false,
+      "failOnUnprocessableDocument": false
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "id",
+      "mappingFunction": {
+        "name": "base64Encode",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "file_name",
+      "mappingFunction": null
+    }
+  ],
+  "outputFieldMappings": [
+    {
+      "sourceFieldName": "/document/layout_markdown_document/*/content",
+      "targetFieldName": "content",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_markdown_document/*/sections",
+      "targetFieldName": "text_sections",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_markdown_document/*/ordinalPosition",
+      "targetFieldName": "potition",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*",
+      "targetFieldName": "normalized_images",
+      "mappingFunction": null
+    }
+  ],
+  "cache": null,
+  "encryptionKey": null
+}

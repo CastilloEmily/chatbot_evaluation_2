@@ -1,0 +1,11 @@
+2025-05-26 13:39:40,294 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_13-39-40.log
+2025-05-26 13:39:40,299 [INFO] [main] Inicio del programa principal
+2025-05-26 13:39:40,299 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 13:39:40,339 [ERROR] [main] Error en la ejecución principal: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 238, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 123, in evaluate_combination
+    for label, questions in load_questions_by_label():
+        ^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)

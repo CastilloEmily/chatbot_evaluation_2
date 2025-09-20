@@ -1,0 +1,44 @@
+{
+  "@odata.context": "https://search-ric-uat-v2.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DDBA31A9E3F950\"",
+  "name": "documentlayout-indexer-v12",
+  "description": "Indexer para pasar layouts separados",
+  "dataSourceName": "chatric-idx-datasource-v3",
+  "skillsetName": "documentlayout-skillset-12",
+  "targetIndexName": "documentlayout-index-v12",
+  "disabled": null,
+  "schedule": null,
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "configuration": {
+      "parsingMode": "default",
+      "imageAction": "generateNormalizedImages",
+      "allowSkillsetToReadFileData": true,
+      "failOnUnsupportedContentType": false,
+      "failOnUnprocessableDocument": false
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "file_name",
+      "mappingFunction": null
+    }
+  ],
+  "outputFieldMappings": [
+    {
+      "sourceFieldName": "/document/layout_markdown_document/*",
+      "targetFieldName": "layouts",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*/images",
+      "targetFieldName": "images",
+      "mappingFunction": null
+    }
+  ],
+  "cache": null,
+  "encryptionKey": null
+}

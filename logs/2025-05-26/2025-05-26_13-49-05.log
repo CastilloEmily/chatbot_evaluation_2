@@ -1,0 +1,15 @@
+2025-05-26 13:49:05,049 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_13-49-05.log
+2025-05-26 13:49:05,050 [INFO] [main] Inicio del programa principal
+2025-05-26 13:49:05,050 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 13:49:05,052 [ERROR] [main] Error en la ejecución principal: tuple indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 238, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 124, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 138, in evaluate_label
+    label_score = evaluate_question(question, config, label)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 159, in evaluate_question
+    id = q['id']
+         ~^^^^^^
+TypeError: tuple indices must be integers or slices, not str

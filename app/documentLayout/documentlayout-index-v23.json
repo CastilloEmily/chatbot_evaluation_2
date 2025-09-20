@@ -1,0 +1,344 @@
+{
+  "@odata.etag": "\"0x8DDD671877B75A8\"",
+  "name": "documentlayout-index-v23",
+  "defaultScoringProfile": "perfilTitulo",
+  "fields": [
+    {
+      "name": "document_id",
+      "type": "Edm.String",
+      "searchable": false,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "document",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "chunk_id",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": true,
+      "analyzer": "keyword",
+      "synonymMaps": []
+    },
+    {
+      "name": "text",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "h1",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "h2",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "h3",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "h4",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "h5",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "h6",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "text_vec",
+      "type": "Collection(Edm.Single)",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "dimensions": 1536,
+      "vectorSearchProfile": "vector--azureOpenAi-text-profile",
+      "synonymMaps": []
+    },
+    {
+      "name": "image_id",
+      "type": "Edm.String",
+      "searchable": false,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "img_caption",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "img_caption_vec",
+      "type": "Collection(Edm.Single)",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "dimensions": 1536,
+      "vectorSearchProfile": "vector--azureOpenAi-text-profile",
+      "synonymMaps": []
+    },
+    {
+      "name": "img_path",
+      "type": "Edm.String",
+      "searchable": false,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "synonymMaps": []
+    }
+  ],
+  "scoringProfiles": [
+    {
+      "name": "perfilTitulo",
+      "functionAggregation": "sum",
+      "text": {
+        "weights": {
+          "document": 3,
+          "h1": 2,
+          "h2": 1.8,
+          "h3": 1.5,
+          "h4": 1.5,
+          "h5": 0.8,
+          "h6": 0.8,
+          "text": 2.5,
+          "img_caption": 1.5
+        }
+      },
+      "functions": []
+    }
+  ],
+  "suggesters": [
+    {
+      "name": "sugerencias",
+      "searchMode": "analyzingInfixMatching",
+      "sourceFields": [
+        "text",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "img_caption"
+      ]
+    }
+  ],
+  "analyzers": [],
+  "normalizers": [],
+  "tokenizers": [],
+  "tokenFilters": [],
+  "charFilters": [],
+  "similarity": {
+    "@odata.type": "#Microsoft.Azure.Search.BM25Similarity"
+  },
+  "semantic": {
+    "configurations": [
+      {
+        "name": "chatric--vector-idx-semantic",
+        "flightingOptIn": false,
+        "rankingOrder": "BoostedRerankerScore",
+        "prioritizedFields": {
+          "titleField": {
+            "fieldName": "document"
+          },
+          "prioritizedContentFields": [
+            {
+              "fieldName": "text"
+            },
+            {
+              "fieldName": "img_caption"
+            }
+          ],
+          "prioritizedKeywordsFields": [
+            {
+              "fieldName": "h1"
+            },
+            {
+              "fieldName": "h2"
+            },
+            {
+              "fieldName": "h3"
+            },
+            {
+              "fieldName": "h4"
+            },
+            {
+              "fieldName": "h5"
+            },
+            {
+              "fieldName": "h6"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "vectorSearch": {
+    "algorithms": [
+      {
+        "name": "chatric--vector-idx-algorithm",
+        "kind": "hnsw",
+        "hnswParameters": {
+          "metric": "cosine",
+          "m": 8,
+          "efConstruction": 600,
+          "efSearch": 300
+        }
+      }
+    ],
+    "profiles": [
+      {
+        "name": "vector--azureOpenAi-text-profile",
+        "algorithm": "chatric--vector-idx-algorithm",
+        "vectorizer": "chatric--vector-idx-azureOpenAi-text-vectorizer",
+        "compression": "chatric--vector-idx-compressions"
+      }
+    ],
+    "vectorizers": [
+      {
+        "name": "vectorizer-1752658026008",
+        "kind": "azureOpenAI",
+        "azureOpenAIParameters": {
+          "resourceUri": "https://tke4o.openai.azure.com",
+          "deploymentId": "text-embedding-ada-002",
+          "apiKey": "<redacted>",
+          "modelName": "text-embedding-ada-002"
+        }
+      },
+      {
+        "name": "chatric--vector-idx-azureOpenAi-text-vectorizer",
+        "kind": "azureOpenAI",
+        "azureOpenAIParameters": {
+          "resourceUri": "https://tke4o.openai.azure.com",
+          "deploymentId": "text-embedding-ada-002",
+          "modelName": "text-embedding-ada-002"
+        }
+      }
+    ],
+    "compressions": [
+      {
+        "name": "chatric--vector-idx-compressions",
+        "kind": "scalarQuantization",
+        "scalarQuantizationParameters": {
+          "quantizedDataType": "int8"
+        },
+        "rescoringOptions": {
+          "enableRescoring": true,
+          "defaultOversampling": 5,
+          "rescoreStorageMethod": "preserveOriginals"
+        }
+      }
+    ]
+  }
+}

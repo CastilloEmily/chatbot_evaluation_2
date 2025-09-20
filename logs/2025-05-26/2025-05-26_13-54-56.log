@@ -1,0 +1,15 @@
+2025-05-26 13:54:56,444 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_13-54-56.log
+2025-05-26 13:54:56,445 [INFO] [main] Inicio del programa principal
+2025-05-26 13:54:56,445 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 13:54:56,447 [ERROR] [main] Error en la ejecución principal: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 239, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 124, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 137, in evaluate_label
+    label_score = evaluate_question(question, config, label)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 158, in evaluate_question
+    print(f"[INFO] Evaluando pregunta: {q['id']}")
+                                        ~^^^^^^
+TypeError: string indices must be integers, not 'str'

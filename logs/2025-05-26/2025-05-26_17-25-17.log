@@ -1,0 +1,12 @@
+2025-05-26 17:25:17,155 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_17-25-17.log
+2025-05-26 17:25:17,156 [INFO] [main] Inicio del programa principal
+2025-05-26 17:25:17,156 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 17:25:22,287 [INFO] [loader] Latencia: 3.638 s
+2025-05-26 17:25:22,289 [INFO] [evaluator] [cq1] Creando QAEvaluator con model_config...
+2025-05-26 17:25:22,306 [INFO] [evaluator] [cq1] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-26 17:25:23,796 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 17:25:24,444 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 17:25:25,230 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 17:25:25,462 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 17:25:25,468 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-26 17:25:25,470 [INFO] [evaluator] [cq1] Evaluación completada correctamente.

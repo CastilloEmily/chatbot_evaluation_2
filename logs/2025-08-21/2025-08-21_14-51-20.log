@@ -1,0 +1,85 @@
+2025-08-21 14:51:20,548 [INFO] [root] Logging configurado. Archivo de log: logs\2025-08-21\2025-08-21_14-51-20.log
+2025-08-21 14:51:20,548 [INFO] [main] Inicio del programa principal
+2025-08-21 14:51:20,549 [INFO] [EmailReporter] Inicializando EmailReporter y cargando variables de entorno...
+2025-08-21 14:51:20,550 [INFO] [EmailReporter] Variables de entorno cargadas correctamente.
+2025-08-21 14:51:20,550 [INFO] [main] Inicio del proceso en modo: combinations
+2025-08-21 14:51:20,550 [INFO] [main] Cargando combinaciones pendientes desde archivo: data/combinations\combinations_pending.json
+2025-08-21 14:51:20,587 [INFO] [change_settings] Inicio actualización settings de Web App 'ChatRic' en RG 'openAI', en subscription 'b29c9dac-08df-4427-9ddb-d50fca7bc22f'
+2025-08-21 14:51:20,587 [INFO] [azure.identity._credentials.environment] No environment configuration found.
+2025-08-21 14:51:20,589 [INFO] [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use IMDS
+2025-08-21 14:51:20,590 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.13.4 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-08-21 14:51:22,434 [INFO] [azure.identity._credentials.chained] DefaultAzureCredential acquired a token from AzureCliCredential
+2025-08-21 14:51:22,435 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings/list?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '8934a7f2-7e8d-11f0-a593-8c3b4a0af541'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.4 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-08-21 14:51:33,684 [ERROR] [change_settings] Error inesperado: <urllib3.connection.HTTPSConnection object at 0x00000267C018DD30>: Failed to resolve 'management.azure.com' ([Errno 11001] getaddrinfo failed)
+2025-08-21 14:51:33,684 [ERROR] [main] Error en la ejecución principal: <urllib3.connection.HTTPSConnection object at 0x00000267C018DD30>: Failed to resolve 'management.azure.com' ([Errno 11001] getaddrinfo failed)
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 307, in main
+    update_webapp_settings(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        subscription_id=env_vars["SUBSCRIPTION_ID"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        new_settings=combination
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\change_settins.py", line 109, in update_webapp_settings
+    raise e  # Deja que .main lo capture y lo reporte por email
+    ^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\change_settins.py", line 29, in update_webapp_settings
+    current_config = client.web_apps.list_application_settings(resource_group, webapp_name)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\tracing\decorator.py", line 119, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\mgmt\web\v2024_04_01\operations\_web_apps_operations.py", line 19205, in list_application_settings
+    pipeline_response: PipelineResponse = self._client._pipeline.run(  # pylint: disable=protected-access
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _request, stream=_stream, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 2 more times]
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\mgmt\core\policies\_base.py", line 95, in send
+    response = self.next.send(request)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\policies\_redirect.py", line 205, in send
+    response = self.next.send(request)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\policies\_authentication.py", line 159, in send
+    response = self.next.send(request)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 2 more times]
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: <urllib3.connection.HTTPSConnection object at 0x00000267C018DD30>: Failed to resolve 'management.azure.com' ([Errno 11001] getaddrinfo failed)
+2025-08-21 14:51:33,833 [INFO] [EmailReporter] Iniciando envío de reporte por correo.
+2025-08-21 14:51:35,439 [INFO] [EmailReporter] ✅ Correo enviado con éxito.

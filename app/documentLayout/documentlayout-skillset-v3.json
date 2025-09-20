@@ -1,0 +1,106 @@
+{
+  "@odata.etag": "\"0x8DDBA2ACA2136B3\"",
+  "name": "documentlayout-skillset-v3",
+  "description": "only document layout with markdown outputs test separate sections",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Util.DocumentIntelligenceLayoutSkill",
+      "name": "#1",
+      "description": "Analizar el layout del documento",
+      "context": "/document",
+      "outputMode": "oneToMany",
+      "markdownHeaderDepth": "h6",
+      "outputFormat": "markdown",
+      "extractionOptions": [
+        "images"
+      ],
+      "inputs": [
+        {
+          "name": "file_data",
+          "source": "/document/file_data",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "markdown_document",
+          "targetName": "layout_markdown_document"
+        },
+        {
+          "name": "normalized_images",
+          "targetName": "layout_normalized_images"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Util.ShaperSkill",
+      "name": "flattenLayoutObjects",
+      "description": "Extrae cada layout en un objeto usable en el índice",
+      "context": "/document/layout_markdown_document/*",
+      "inputs": [
+        {
+          "name": "storagePath",
+          "source": "/document/metadata_storage_path",
+          "inputs": []
+        },
+        {
+          "name": "position",
+          "source": "/document/layout_markdown_document/*/ordinalPosition",
+          "inputs": []
+        },
+        {
+          "name": "content",
+          "source": "/document/layout_markdown_document/*/content",
+          "inputs": []
+        },
+        {
+          "name": "h1",
+          "source": "/document/layout_markdown_document/*/sections/h1",
+          "inputs": []
+        },
+        {
+          "name": "h2",
+          "source": "/document/layout_markdown_document/*/sections/h2",
+          "inputs": []
+        },
+        {
+          "name": "h3",
+          "source": "/document/layout_markdown_document/*/sections/h3",
+          "inputs": []
+        },
+        {
+          "name": "h4",
+          "source": "/document/layout_markdown_document/*/sections/h4",
+          "inputs": []
+        },
+        {
+          "name": "h5",
+          "source": "/document/layout_markdown_document/*/sections/h5",
+          "inputs": []
+        },
+        {
+          "name": "h6",
+          "source": "/document/layout_markdown_document/*/sections/h6",
+          "inputs": []
+        },
+        {
+          "name": "image",
+          "source": "/document/layout_normalized_images/*/name",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "targetName": "layouts"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.AIServicesByKey",
+    "description": "Conexión a Azure AI multi‑service en East US 2",
+    "key": "<redacted>",
+    "subdomainUrl": "https://multiservice-ric.cognitiveservices.azure.com/"
+  }
+}

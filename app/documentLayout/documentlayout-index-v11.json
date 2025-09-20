@@ -1,0 +1,214 @@
+{
+  "@odata.etag": "\"0x8DDBA1BA83C73E3\"",
+  "name": "documentlayout-index-v11",
+  "fields": [
+    {
+      "name": "id",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": true,
+      "synonymMaps": []
+    },
+    {
+      "name": "file_name",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "layouts",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "content",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "ordinalPosition",
+          "type": "Edm.Int32",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "chunk_id",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": false,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "parent_id",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "chunk",
+          "type": "Collection(Edm.String)",
+          "searchable": true,
+          "filterable": false,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "sections",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "h1",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "h2",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "h3",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "h4",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "h5",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "h6",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "images",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "ocr_text",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": false,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "captions",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": false,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        }
+      ]
+    }
+  ],
+  "scoringProfiles": [],
+  "suggesters": [],
+  "analyzers": [],
+  "normalizers": [],
+  "tokenizers": [],
+  "tokenFilters": [],
+  "charFilters": [],
+  "similarity": {
+    "@odata.type": "#Microsoft.Azure.Search.BM25Similarity"
+  }
+}

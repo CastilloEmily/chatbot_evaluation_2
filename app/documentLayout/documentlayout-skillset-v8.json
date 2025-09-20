@@ -1,0 +1,42 @@
+{
+  "@odata.etag": "\"0x8DDBA2ACA2C26F4\"",
+  "name": "documentlayout-skillset-v8",
+  "description": "only document layout with markdown outputs test separate sections",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Util.DocumentIntelligenceLayoutSkill",
+      "name": "#1",
+      "description": "Analizar el layout del documento",
+      "context": "/document",
+      "outputMode": "oneToMany",
+      "markdownHeaderDepth": "h6",
+      "outputFormat": "markdown",
+      "extractionOptions": [
+        "images"
+      ],
+      "inputs": [
+        {
+          "name": "file_data",
+          "source": "/document/file_data",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "markdown_document",
+          "targetName": "layout_markdown_document"
+        },
+        {
+          "name": "normalized_images",
+          "targetName": "layout_normalized_images"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.AIServicesByKey",
+    "description": "Conexión a Azure AI multi‑service en East US 2",
+    "key": "<redacted>",
+    "subdomainUrl": "https://multiservice-ric.cognitiveservices.azure.com/"
+  }
+}

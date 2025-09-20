@@ -1,0 +1,254 @@
+{
+  "@odata.etag": "\"0x8DDD67993074F26\"",
+  "name": "documentlayout-skillset-v22",
+  "description": "Agregar verbalización de imagen",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Util.DocumentIntelligenceLayoutSkill",
+      "name": "#1",
+      "description": "Analizar el layout del documento",
+      "context": "/document",
+      "outputMode": "oneToMany",
+      "markdownHeaderDepth": "h6",
+      "outputFormat": "markdown",
+      "extractionOptions": [
+        "images"
+      ],
+      "inputs": [
+        {
+          "name": "file_data",
+          "source": "/document/file_data",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "markdown_document",
+          "targetName": "layout_markdown_document"
+        },
+        {
+          "name": "normalized_images",
+          "targetName": "layout_normalized_images"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.SplitSkill",
+      "name": "#2",
+      "description": "Dividir el contenido markdown en chunks optimizados para embeddings",
+      "context": "/document/layout_markdown_document/*",
+      "defaultLanguageCode": "en",
+      "textSplitMode": "pages",
+      "maximumPageLength": 1000,
+      "pageOverlapLength": 150,
+      "maximumPagesToTake": 0,
+      "unit": "characters",
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/layout_markdown_document/*/content",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "textItems",
+          "targetName": "layout_chunks"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill",
+      "name": "#3",
+      "context": "/document/layout_markdown_document/*/layout_chunks/*",
+      "resourceUri": "https://tke4o.openai.azure.com",
+      "deploymentId": "text-embedding-ada-002",
+      "dimensions": 1536,
+      "modelName": "text-embedding-ada-002",
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/layout_markdown_document/*/layout_chunks/*",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "embedding",
+          "targetName": "text_vector"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Custom.ChatCompletionSkill",
+      "name": "genAI-prompt-skill",
+      "description": "GenAI Prompt skill for image verbalization",
+      "context": "/document/layout_normalized_images/*",
+      "uri": "https://tke4o.openai.azure.com/openai/deployments/tke4o/chat/completions?api-version=2025-01-01-preview",
+      "httpMethod": "POST",
+      "timeout": "PT30S",
+      "batchSize": 1,
+      "apiKey": "<redacted>",
+      "inputs": [
+        {
+          "name": "systemMessage",
+          "source": "='You are tasked with generating concise, accurate descriptions of images, figures, diagrams, or charts in documents. The goal is to capture the key information and meaning conveyed by the image without including extraneous details like style, colors, visual aesthetics, or size.\n\nInstructions:\nContent Focus: Describe the core content and relationships depicted in the image.\n\nFor diagrams, specify the main elements and how they are connected or interact.\nFor charts, highlight key data points, trends, comparisons, or conclusions.\nFor figures or technical illustrations, identify the components and their significance.\nClarity & Precision: Use concise language to ensure clarity and technical accuracy. Avoid subjective or interpretive statements.\n\nAvoid Visual Descriptors: Exclude details about:\n\nColors, shading, and visual styles.\nImage size, layout, or decorative elements.\nFonts, borders, and stylistic embellishments.\nContext: If relevant, relate the image to the broader content of the technical document or the topic it supports.\n\nExample Descriptions:\nDiagram: \"A flowchart showing the four stages of a machine learning pipeline: data collection, preprocessing, model training, and evaluation, with arrows indicating the sequential flow of tasks.\"\n\nChart: \"A bar chart comparing the performance of four algorithms on three datasets, showing that Algorithm A consistently outperforms the others on Dataset 1.\"\n\nFigure: \"A labeled diagram illustrating the components of a transformer model, including the encoder, decoder, self-attention mechanism, and feedforward layers.\"'",
+          "inputs": []
+        },
+        {
+          "name": "userMessage",
+          "source": "='Please describe this image.'",
+          "inputs": []
+        },
+        {
+          "name": "image",
+          "source": "/document/layout_normalized_images/*/data",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "response",
+          "targetName": "verbalizedImage"
+        }
+      ],
+      "httpHeaders": {}
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill",
+      "name": "#4",
+      "description": "Azure Open AI Embedding skill for verbalized image embedding",
+      "context": "/document/layout_normalized_images/*",
+      "resourceUri": "https://tke4o.openai.azure.com",
+      "deploymentId": "text-embedding-ada-002",
+      "dimensions": 1536,
+      "modelName": "text-embedding-ada-002",
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/layout_normalized_images/*/verbalizedImage",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "embedding",
+          "targetName": "verbalizedImage_vector"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Util.ShaperSkill",
+      "name": "#5",
+      "context": "/document/layout_normalized_images/*",
+      "inputs": [
+        {
+          "name": "normalized_images",
+          "source": "/document/layout_normalized_images/*",
+          "inputs": []
+        },
+        {
+          "name": "imagePath",
+          "source": "='my_container_name/'+$(/document/layout_normalized_images/*/imagePath)",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "targetName": "new_normalized_images"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.AIServicesByKey",
+    "description": "Conexión a Azure AI multi‑service en East US 2",
+    "key": "<redacted>",
+    "subdomainUrl": "https://multiservice-ric.cognitiveservices.azure.com/"
+  },
+  "indexProjections": {
+    "selectors": [
+      {
+        "targetIndexName": "documentlayout-index-v22",
+        "parentKeyFieldName": "document_id",
+        "sourceContext": "/document/layout_markdown_document/*/layout_chunks/*",
+        "mappings": [
+          {
+            "name": "document",
+            "source": "/document/metadata_storage_name",
+            "inputs": []
+          },
+          {
+            "name": "text",
+            "source": "/document/layout_markdown_document/*/layout_chunks/*",
+            "inputs": []
+          },
+          {
+            "name": "h1",
+            "source": "/document/layout_markdown_document/*/sections/h1",
+            "inputs": []
+          },
+          {
+            "name": "h2",
+            "source": "/document/layout_markdown_document/*/sections/h2",
+            "inputs": []
+          },
+          {
+            "name": "h3",
+            "source": "/document/layout_markdown_document/*/sections/h3",
+            "inputs": []
+          },
+          {
+            "name": "h4",
+            "source": "/document/layout_markdown_document/*/sections/h4",
+            "inputs": []
+          },
+          {
+            "name": "h5",
+            "source": "/document/layout_markdown_document/*/sections/h5",
+            "inputs": []
+          },
+          {
+            "name": "h6",
+            "source": "/document/layout_markdown_document/*/sections/h6",
+            "inputs": []
+          },
+          {
+            "name": "text_vec",
+            "source": "/document/layout_markdown_document/*/layout_chunks/*/text_vector/*",
+            "inputs": []
+          }
+        ]
+      },
+      {
+        "targetIndexName": "documentlayout-index-v22",
+        "parentKeyFieldName": "image_id",
+        "sourceContext": "/document/layout_normalized_images/*",
+        "mappings": [
+          {
+            "name": "document",
+            "source": "/document/metadata_storage_name",
+            "inputs": []
+          },
+          {
+            "name": "img_caption",
+            "source": "/document/layout_normalized_images/*/verbalizedImage",
+            "inputs": []
+          },
+          {
+            "name": "img_caption_vec",
+            "source": "/document/layout_normalized_images/*/verbalizedImage_vector",
+            "inputs": []
+          },
+          {
+            "name": "img_path",
+            "source": "/document/layout_normalized_images/*/new_normalized_images/imagePath",
+            "inputs": []
+          }
+        ]
+      }
+    ],
+    "parameters": {}
+  }
+}

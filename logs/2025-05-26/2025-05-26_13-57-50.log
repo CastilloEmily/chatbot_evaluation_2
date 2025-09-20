@@ -1,0 +1,17 @@
+2025-05-26 13:57:50,680 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_13-57-50.log
+2025-05-26 13:57:50,681 [INFO] [main] Inicio del programa principal
+2025-05-26 13:57:50,681 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 13:57:51,288 [INFO] [loader] Latencia: 0.605 s
+2025-05-26 13:57:51,289 [WARNING] [loader] Error 401: No autorizado.
+2025-05-26 13:57:51,294 [ERROR] [main] Error en la ejecución principal: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 238, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 124, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 137, in evaluate_label
+    label_score = evaluate_question(question, config, label)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 162, in evaluate_question
+    for answer, context, latency in send_question_to_target(query, env_vars["WEBCHAT_URL"]):
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 3)

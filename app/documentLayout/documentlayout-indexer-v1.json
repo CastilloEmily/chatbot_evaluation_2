@@ -1,0 +1,158 @@
+{
+  "@odata.context": "https://search-ric-uat.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DDB559F438BABB\"",
+  "name": "documentlayout-indexer-v1",
+  "description": null,
+  "dataSourceName": "chatric-idx-datasource-v3",
+  "skillsetName": "documentlayout-skillset-v1",
+  "targetIndexName": "documentlayout-index-v1",
+  "disabled": null,
+  "schedule": {
+    "interval": "PT15M",
+    "startTime": "2025-06-25T12:51:44.081Z"
+  },
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "configuration": {
+      "dataToExtract": "contentAndMetadata",
+      "parsingMode": "default",
+      "imageAction": "generateNormalizedImages",
+      "allowSkillsetToReadFileData": true,
+      "failOnUnsupportedContentType": false,
+      "failOnUnprocessableDocument": false
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "id",
+      "mappingFunction": {
+        "name": "base64Encode",
+        "parameters": null
+      }
+    }
+  ],
+  "outputFieldMappings": [
+    {
+      "sourceFieldName": "/document/text_sections/*",
+      "targetFieldName": "text_sections",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "/document/layout_normalized_images/*",
+      "targetFieldName": "normalized_images",
+      "mappingFunction": null
+    }
+  ],
+  "cache": null,
+  "encryptionKey": null
+}
+
+
+
+
+{
+  "id": "doc_A17.6_2022",
+  "file_name": "A17.6_2022.pdf",
+  "version": "2022",
+  "layouts": [
+    {
+      "ordinalPosition": 1,
+      "sections": {
+        "h1": "Standard for Elevator Systems",
+        "h2": "Safety Requirements"
+      },
+      "chunks": [
+        {
+          "chunk_id": "1",
+          "text": "All systems must comply with...",
+          "embedding": [...],
+          "chunk_type": "paragraph"
+        }
+      ]
+    }
+  ],
+  // Campos planos para búsqueda rápida:
+  "flat_chunks": [
+    {
+      "chunk_id": "1",
+      "text": "All systems must comply with...",
+      "embedding": [...],
+      "parent_section": "Safety Requirements"
+    }
+  ]
+}
+
+
+[
+  "A\r\nInspection and Replacement of Steel Wire Ropes\r\n\r\n\r\n<table>\r\n<tr>\r\n<th>Figures</th>\r\n<th></th>\r\n<th></th>\r\n</tr>\r\n<tr>\r\n<td>1.3.1.1-1</td>\r\n<td>Elements of Stranded Steel Wire Rope</td>\r\n<td>2</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.1.3.2-1</td>\r\n<td>Round Strand</td>\r\n<td>3</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.1.3.2-2</td>\r\n<td>Compacted Round Strand: Before and After Compacting</td>\r\n<td>3</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.1.3.3-1</td>\r\n<td>Lay Direction of Strands for Stranded Ropes</td>\r\n<td>3</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.1.3.4-1</td>\r\n<td>Seale Construction (e.g., 19S, 9-9-1)</td>\r\n<td>3</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.1.3.4-2</td>\r\n<td>Warrington Construction [e.g., 19W, (6+6)-6-1]</td>\r\n<td>3</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.1.3.4-3</td>\r\n<td>Filler Construction (e.g., 25F, 12-6F-6-1)</td>\r\n<td>3</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.1.4-1</td>\r\n<td>Examples of Cores</td>\r\n<td>4</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.2.4.2-1</td>\r\n<td>Regular (Ordinary) Lay and Lang Lay</td>\r\n<td>5</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.3.1.1-1</td>",
+  "<td>4</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.2.4.2-1</td>\r\n<td>Regular (Ordinary) Lay and Lang Lay</td>\r\n<td>5</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.3.1.1-1</td>\r\n<td>Diameter of Round Rope</td>\r\n<td>5</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.3.2.1-1</td>\r\n<td>Strand Lay Length</td>\r\n<td>5</td>\r\n</tr>\r\n<tr>\r\n<td>1.3.3.2.2-1</td>\r\n<td>Rope Lay Length</td>\r\n<td>6</td>\r\n</tr>\r\n<tr>\r\n<td>A-1</td>\r\n<td>Inspection and Replacement of Steel Wire Rope(s)</td>\r\n<td>35</td>\r\n</tr>\r\n<tr>\r\n<td>Tables</td>\r\n<td></td>\r\n<td></td>\r\n</tr>\r\n<tr>\r\n<td>1.4.1-1</td>\r\n<td>Wire Level or Tensile Strength Grades for Given Rope Grades</td>\r\n<td>7</td>\r\n</tr>\r\n<tr>\r\n<td>1.4.1.1-1</td>\r\n<td>Wire Level or Tensile Strength Grade Requirements</td>\r\n<td>8</td>\r\n</tr>\r\n<tr>\r\n<td>1.4.1.1-2</td>\r\n<td>Wire Torsion Requirements</td>\r\n<td>8</td>\r\n</tr>\r\n<tr>\r\n<td>1.6.4.1-1</td>\r\n<td>Weight of Coating for Final-Galvanized or Final-Coated Zn-5Al-MM Rope Wire for Newly Constructed Rope</td>\r\n<td>10</td>\r\n</tr>\r\n<tr>\r\n<td>1.6.4.1-2</td>",
+  "of Coating for Final-Galvanized or Final-Coated Zn-5Al-MM Rope Wire for Newly Constructed Rope</td>\r\n<td>10</td>\r\n</tr>\r\n<tr>\r\n<td>1.6.4.1-2</td>\r\n<td>Weight of Coating for Drawn-Galvanized or Drawn-Coated Zn-5Al-MM Rope Wire for Newly Constructed Rope</td>\r\n<td>10</td>\r\n</tr>\r\n<tr>\r\n<td>1.6.6.1.1-1</td>\r\n<td>Tolerances on Rope Diameter (Stranded Rope) for Newly Constructed Rope With Cores of Fiber or Other Nonmetallic Materials</td>\r\n<td>10</td>\r\n</tr>\r\n<tr>\r\n<td>1.6.6.1.1-2</td>\r\n<td>Tolerances on Rope Diameter (Stranded Rope) for Newly Constructed Rope With Steel or Steel- Based Composite Cores</td>\r\n<td>11</td>\r\n</tr>\r\n<tr>\r\n<td>1.6.6.1.2-1</td>\r\n<td>Permissible Differences in Rope Diameter for Newly Constructed Rope</td>\r\n<td>11</td>\r\n</tr>\r\n<tr>\r\n<td>1.8.1-1</td>\r\n<td>Ordering Information</td>\r\n<td>13</td>\r\n</tr>\r\n<tr>\r\n<td>1.10.1.2-1</td>\r\n<td>Wire Breaks: Crown Wire Breaks Per Lay Length</td>\r\n<td>14</td>\r\n</tr>\r\n<tr>\r\n<td>1.10.3-1</td>\r\n<td>Minimum Diameter</td>",
+  "<td>1.10.1.2-1</td>\r\n<td>Wire Breaks: Crown Wire Breaks Per Lay Length</td>\r\n<td>14</td>\r\n</tr>\r\n<tr>\r\n<td>1.10.3-1</td>\r\n<td>Minimum Diameter</td>\r\n<td>15</td>\r\n</tr>\r\n<tr>\r\n<td>2.4.1.1-1</td>\r\n<td>Nominal Aramid Yarn Property Values</td>\r\n<td>18</td>\r\n</tr>\r\n<tr>\r\n<td>2.4.1.1-2</td>\r\n<td>Aramid Resin Impregnated Strand Property Values</td>\r\n<td>18</td>\r\n</tr>\r\n<tr>\r\n<td>2.6.2-1</td>\r\n<td>Tolerances on Diameter</td>\r\n<td>19</td>\r\n</tr>\r\n<tr>\r\n<td>2.7.2-1</td>\r\n<td>Tolerances on Dimensions</td>\r\n<td>20</td>\r\n</tr>\r\n<tr>\r\n<td>3.5.7-1</td>\r\n<td>Tolerances on Nominal Noncircular Elastomeric-Coated Steel Suspension Members Sizes</td>\r\n<td>24</td>\r\n</tr>\r\n<tr>\r\n<td>I-1.1-1</td>\r\n<td>Classification 6 × 19 FC, Round Strand, Fiber Core or Polymer Core</td>\r\n<td>27</td>\r\n</tr>\r\n<tr>\r\n<td>I-1.1-2</td>\r\n<td>Classification 8 x 19 FC, Round Strand, Fiber Core or Polymer Core</td>\r\n<td>29</td>\r\n</tr>\r\n<tr>\r\n<td>I-1.1-3</td>\r\n<td>Classification 8 × 19, Round Strand, Steel Core</td>\r\n<td>31</td>",
+  "Fiber Core or Polymer Core</td>\r\n<td>29</td>\r\n</tr>\r\n<tr>\r\n<td>I-1.1-3</td>\r\n<td>Classification 8 × 19, Round Strand, Steel Core</td>\r\n<td>31</td>\r\n</tr>\r\n<tr>\r\n<td>I-1.1-4</td>\r\n<td>Classification 6 × 19, Round Strand, Steel Cores</td>\r\n<td>33</td>\r\n</tr>\r\n</table>\r\n\r\n\r\n<!-- PageNumber=\"iv\" -->\r\n<!-- PageNumber=\"34\" -->\r\n\r\nNo further reproduction or distribution is permitted.\r\n\r\n<!-- PageFooter=\"Copyrighted material licensed to Thyssenkrupp by Clarivate Analytics (US) LLC, subscriptions. techstreet .com, downloaded on 2019-01-02 17:22:52 +0000 by William j Morrison.\" -->\r\n<!-- PageBreak -->"
+]
+
+
+
+{
+  "@odata.type": "#Microsoft.Skills.Util.ShaperSkill",
+  "name": "#4",
+  "description": "estructura de texto de salida",
+  "context": "/document/layout_markdown_document/*",
+  "inputs": [
+    {
+      "name": "chunk",
+      "source": "/document/layout_markdown_document/*/layout_chunks",
+      "inputs": []
+    },
+    {
+      "name": "sections",
+      "sourceContext": "/document/layout_markdown_document/*/sections",
+      "inputs": [
+        {
+          "name": "h1",
+          "source": "/document/layout_markdown_document/*/sections/h1",
+          "inputs": []
+        },
+        {
+          "name": "h2",
+          "source": "/document/layout_markdown_document/*/sections/h2",
+          "inputs": []
+        },
+        {
+          "name": "h3",
+          "source": "/document/layout_markdown_document/*/sections/h3",
+          "inputs": []
+        },
+        {
+          "name": "h4",
+          "source": "/document/layout_markdown_document/*/sections/h4",
+          "inputs": []
+        },
+        {
+          "name": "h5",
+          "source": "/document/layout_markdown_document/*/sections/h5",
+          "inputs": []
+        },
+        {
+          "name": "h6",
+          "source": "/document/layout_markdown_document/*/sections/h6",
+          "inputs": []
+        }
+      ]
+    },
+    {
+      "name": "ordinalPosition",
+      "source": "/document/layout_markdown_document/*/ordinalPosition",
+      "inputs": []
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "targetName": "chunks"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+2025-05-30 13:53:19,536 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-30\2025-05-30_13-53-19.log
+2025-05-30 13:53:19,536 [INFO] [main] Inicio del programa principal
+2025-05-30 13:53:19,537 [INFO] [main] Inicio del proceso en modo: current
+2025-05-30 13:53:19,538 [INFO] [main] Modo 'current' seleccionado. Actualizando configuración actual del Web App.
+2025-05-30 13:53:19,538 [INFO] [change_settings] Inicio actualización settings de Web App 'ChatRic' en RG 'openAI', en subscription 'b29c9dac-08df-4427-9ddb-d50fca7bc22f'
+2025-05-30 13:53:19,538 [INFO] [azure.identity._credentials.environment] No environment configuration found.
+2025-05-30 13:53:19,541 [INFO] [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use IMDS
+2025-05-30 13:53:19,542 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-05-30 13:53:21,339 [INFO] [azure.identity._credentials.chained] DefaultAzureCredential acquired a token from AzureCliCredential
+2025-05-30 13:53:21,339 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings/list?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ae0d9eda-3d4c-11f0-a342-24eb1694bf2d'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-05-30 13:53:22,287 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2708'
+    'Content-Type': 'application/json'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': '0b72333d-7f4e-4075-8fcc-e7fc0c1d079c'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-resource-requests': '11999'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: E8A4C7FE39D942309006EA2964BB59CB Ref B: VIEEDGE2905 Ref C: 2025-05-30T11:53:21Z'
+    'Date': 'Fri, 30 May 2025 11:53:21 GMT'
+2025-05-30 13:53:22,287 [INFO] [change_settings] Configuración actual obtenida correctamente.
+2025-05-30 13:53:22,288 [INFO] [change_settings] Modo 'current' activado. No se aplicarán cambios.
+2025-05-30 13:53:22,288 [INFO] [main] Configuración actual del Web App: {'AUTH_CLIENT_SECRET': '', 'AZURE_COSMOSDB_ACCOUNT': '', 'AZURE_COSMOSDB_CONVERSATIONS_CONTAINER': 'conversations', 'AZURE_COSMOSDB_DATABASE': 'db_conversation_history', 'AZURE_COSMOSDB_MONGO_VCORE_CONNECTION_STRING': '', 'AZURE_COSMOSDB_MONGO_VCORE_CONTAINER': '', 'AZURE_COSMOSDB_MONGO_VCORE_CONTENT_COLUMNS': '', 'AZURE_COSMOSDB_MONGO_VCORE_DATABASE': '', 'AZURE_COSMOSDB_MONGO_VCORE_FILENAME_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_INDEX': '', 'AZURE_COSMOSDB_MONGO_VCORE_TITLE_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_URL_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_VECTOR_COLUMNS': '', 'AZURE_OPENAI_EMBEDDING_ENDPOINT': '', 'AZURE_OPENAI_EMBEDDING_KEY': '', 'AZURE_OPENAI_EMBEDDING_NAME': '', 'AZURE_OPENAI_ENDPOINT': 'https://tke4o.openai.azure.com/', 'AZURE_OPENAI_KEY': '200', 'AZURE_OPENAI_MAX_TOKENS': '10', 'AZURE_OPENAI_MODEL': 'tke4o', 'AZURE_OPENAI_MODEL_NAME': 'gpt-4o', 'AZURE_OPENAI_RESOURCE': 'tke4o', 'AZURE_OPENAI_STOP_SEQUENCE': '', 'AZURE_OPENAI_SYSTEM_MESSAGE': 'Mensaje sistema 3', 'AZURE_OPENAI_TEMPERATURE': '0.0', 'AZURE_OPENAI_TOP_P': '0.0', 'AZURE_SEARCH_CONTENT_COLUMNS': '', 'AZURE_SEARCH_ENABLE_IN_DOMAIN': 'false', 'AZURE_SEARCH_FILENAME_COLUMN': '', 'AZURE_SEARCH_INDEX': '', 'AZURE_SEARCH_KEY': '', 'AZURE_SEARCH_PERMITTED_GROUPS_COLUMN': '', 'AZURE_SEARCH_QUERY_TYPE': '', 'AZURE_SEARCH_SEMANTIC_SEARCH_CONFIG': '', 'AZURE_SEARCH_SERVICE': '', 'AZURE_SEARCH_STRICTNESS': '0', 'AZURE_SEARCH_TITLE_COLUMN': '', 'AZURE_SEARCH_TOP_K': '0', 'AZURE_SEARCH_URL_COLUMN': '', 'AZURE_SEARCH_USE_SEMANTIC_SEARCH': 'false', 'AZURE_SEARCH_VECTOR_COLUMNS': '', 'DATASOURCE_TYPE': 'AzureCognitiveSearch', 'ELASTICSEARCH_CONTENT_COLUMNS': '', 'ELASTICSEARCH_EMBEDDING_MODEL_ID': '', 'ELASTICSEARCH_ENABLE_IN_DOMAIN': 'false', 'ELASTICSEARCH_ENCODED_API_KEY': '', 'ELASTICSEARCH_ENDPOINT': '', 'ELASTICSEARCH_FILENAME_COLUMN': '', 'ELASTICSEARCH_INDEX': '', 'ELASTICSEARCH_QUERY_TYPE': '', 'ELASTICSEARCH_STRICTNESS': '3', 'ELASTICSEARCH_TITLE_COLUMN': '', 'ELASTICSEARCH_TOP_K': '5', 'ELASTICSEARCH_URL_COLUMN': '', 'ELASTICSEARCH_VECTOR_COLUMNS': '', 'MONGODB_APP_NAME': '', 'MONGODB_COLLECTION_NAME': '', 'MONGODB_CONTENT_COLUMNS': '', 'MONGODB_DATABASE_NAME': '', 'MONGODB_ENABLE_IN_DOMAIN': 'false', 'MONGODB_ENDPOINT': '', 'MONGODB_FILENAME_COLUMN': '', 'MONGODB_INDEX_NAME': '', 'MONGODB_PASSWORD': '', 'MONGODB_STRICTNESS': '3', 'MONGODB_TITLE_COLUMN': '', 'MONGODB_TOP_K': '5', 'MONGODB_URL_COLUMN': '', 'MONGODB_USERNAME': '', 'MONGODB_VECTOR_COLUMNS': '', 'SCM_DO_BUILD_DURING_DEPLOYMENT': 'true', 'WEBSITE_HTTPLOGGING_RETENTION_DAYS': '2'}
+2025-05-30 13:53:27,233 [INFO] [loader] Latencia: 3.058 s
+2025-05-30 13:53:27,234 [INFO] [evaluator] [cl1] Creando QAEvaluator con model_config...
+2025-05-30 13:53:27,246 [INFO] [evaluator] [cl1] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-30 13:53:28,614 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:29,879 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:29,920 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:30,040 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:30,175 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:30,180 [INFO] [evaluator] [cl1] Evaluación completada correctamente.
+2025-05-30 13:53:30,180 [INFO] [main] [INFO] Cargando pesos de métricas desde: configs/metric_weights.yaml
+2025-05-30 13:53:30,184 [INFO] [main] Pregunta cl1 evaluada: 4.2 para la etiqueta 'close_question'
+2025-05-30 13:53:41,262 [INFO] [loader] Latencia: 7.485 s
+2025-05-30 13:53:41,264 [INFO] [evaluator] [te2] Creando QAEvaluator con model_config...
+2025-05-30 13:53:41,274 [INFO] [evaluator] [te2] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-30 13:53:42,236 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:43,495 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:43,524 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:43,836 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:44,546 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:44,548 [INFO] [evaluator] [te2] Evaluación completada correctamente.
+2025-05-30 13:53:44,549 [INFO] [main] Pregunta te2 evaluada: 3.6 para la etiqueta 'technical_precision'
+2025-05-30 13:53:49,908 [INFO] [loader] Latencia: 2.529 s
+2025-05-30 13:53:49,910 [INFO] [evaluator] [am3] Creando QAEvaluator con model_config...
+2025-05-30 13:53:49,919 [INFO] [evaluator] [am3] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-30 13:53:50,895 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:52,201 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:52,857 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:52,987 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:53,541 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:53:53,544 [INFO] [evaluator] [am3] Evaluación completada correctamente.
+2025-05-30 13:53:53,545 [INFO] [main] Pregunta am3 evaluada: 3.6 para la etiqueta 'ambiguous_or_error_handling'
+2025-05-30 13:54:00,479 [INFO] [loader] Latencia: 2.817 s
+2025-05-30 13:54:00,482 [INFO] [evaluator] [co4] Creando QAEvaluator con model_config...
+2025-05-30 13:54:00,492 [INFO] [evaluator] [co4] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-30 13:54:01,472 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:54:02,853 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:54:03,368 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:54:03,985 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:54:04,622 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-30 13:54:04,625 [INFO] [evaluator] [co4] Evaluación completada correctamente.
+2025-05-30 13:54:04,626 [INFO] [main] Pregunta co4 evaluada: 3.8 para la etiqueta 'comparison_standards'
+2025-05-30 13:54:04,665 [INFO] [EmailReporter] Inicializando EmailReporter y cargando variables de entorno...
+2025-05-30 13:54:04,666 [INFO] [EmailReporter] Variables de entorno cargadas correctamente.
+2025-05-30 13:54:04,666 [INFO] [EmailReporter] Iniciando envío de reporte por correo.
+2025-05-30 13:54:04,666 [INFO] [EmailReporter] Cargando archivo JSON desde: results\2025-05-30_13-53-19\2025-05-30_13-53-19_by_combination.json
+2025-05-30 13:54:04,687 [INFO] [EmailReporter] Archivo JSON cargado correctamente. Registros totales: 1
+2025-05-30 13:54:04,687 [INFO] [EmailReporter] Mejor configuración encontrada con score: 3.8
+2025-05-30 13:54:04,687 [INFO] [EmailReporter] Generando tabla HTML para el top 10 de configuraciones.
+2025-05-30 13:54:04,688 [INFO] [EmailReporter] Tabla HTML generada correctamente.
+2025-05-30 13:54:06,442 [INFO] [EmailReporter] ✅ Correo enviado con éxito.

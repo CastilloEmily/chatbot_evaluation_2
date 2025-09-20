@@ -1,0 +1,14 @@
+2025-05-30 09:14:08,402 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-30\2025-05-30_09-14-08.log
+2025-05-30 09:14:08,403 [INFO] [main] Inicio del programa principal
+2025-05-30 09:14:08,404 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-30 09:14:08,404 [INFO] [main] Generando combinaciones de parámetros desde: configs/settings_ranges.yaml
+2025-05-30 09:14:08,426 [INFO] [main] Cargando combinaciones de parámetros desde archivo YAML: configs/settings_ranges.yaml
+2025-05-30 09:14:08,427 [INFO] [main] Se generaron 3 combinaciones de parámetros.
+2025-05-30 09:14:08,433 [INFO] [change_settings] Inicio actualización settings de Web App 'ChatRic' en RG 'openAI', en subscription 'b29c9dac-08df-4427-9ddb-d50fca7bc22f'
+2025-05-30 09:14:08,433 [INFO] [azure.identity._credentials.environment] No environment configuration found.
+2025-05-30 09:14:08,444 [INFO] [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use IMDS
+2025-05-30 09:14:08,446 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request

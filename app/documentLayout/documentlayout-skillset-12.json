@@ -1,0 +1,73 @@
+{
+  "@odata.etag": "\"0x8DDBA31A9E8135D\"",
+  "name": "documentlayout-skillset-12",
+  "description": "Intento de restructurar el contenido -->> split de markdowm",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Util.DocumentIntelligenceLayoutSkill",
+      "name": "#1",
+      "description": "Analizar el layout del documento",
+      "context": "/document",
+      "outputMode": "oneToMany",
+      "markdownHeaderDepth": "h6",
+      "outputFormat": "markdown",
+      "extractionOptions": [],
+      "inputs": [
+        {
+          "name": "file_data",
+          "source": "/document/file_data",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "markdown_document",
+          "targetName": "layout_markdown_document"
+        },
+        {
+          "name": "normalized_images",
+          "targetName": "layout_normalized_images"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Text.SplitSkill",
+      "name": "split-layout-markdown",
+      "description": "Dividir el contenido markdown en chunks optimizados para embeddings",
+      "context": "/document/layout_markdown_document/*",
+      "defaultLanguageCode": "en",
+      "textSplitMode": "pages",
+      "maximumPageLength": 1000,
+      "pageOverlapLength": 150,
+      "maximumPagesToTake": 0,
+      "unit": "characters",
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/layout_markdown_document/*/content",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "textItems",
+          "targetName": "layout_chunks"
+        },
+        {
+          "name": "lengths",
+          "targetName": "lengths"
+        },
+        {
+          "name": "ordinalPositions",
+          "targetName": "ordinalPositions"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.AIServicesByKey",
+    "description": "Conexión a Azure AI multi‑service en East US 2",
+    "key": "<redacted>",
+    "subdomainUrl": "https://multiservice-ric.cognitiveservices.azure.com/"
+  }
+}

@@ -1,0 +1,5 @@
+2025-05-26 14:37:23,051 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_14-37-23.log
+2025-05-26 14:37:23,052 [INFO] [main] Inicio del programa principal
+2025-05-26 14:37:23,052 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 14:37:23,497 [INFO] [loader] Latencia: 0.406 s
+2025-05-26 14:37:23,497 [ERROR] [loader] Error 401: No autorizado.

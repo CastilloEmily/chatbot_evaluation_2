@@ -1,0 +1,55 @@
+{
+  "close_question": [
+    {
+      "id": "cq1",
+      "question": "¿Un ascensor debe tener un sistema de alarma sonora?",
+      "expected_answer": "Sí, de acuerdo con la normativa EN 81, debe incluir un sistema de alarma sonora para emergencias."
+    },
+    {
+      "id": "cq2",
+      "question": "¿Los ascensores pueden usarse durante un incendio?",
+      "expected_answer": "No, los ascensores no deben usarse durante un incendio salvo que estén específicamente diseñados para ello."
+    }
+  ],
+  "technical_precision": [
+    {
+      "id": "tp1",
+      "question": "¿Cuál es la velocidad nominal máxima permitida para un ascensor eléctrico sin cuarto de máquinas?",
+      "expected_answer": "Según la norma EN 81-20, la velocidad nominal máxima puede ser de hasta 1,6 m/s sin cuarto de máquinas."
+    },
+    {
+      "id": "tp2",
+      "question": "¿Qué requisitos de espacio se exigen para el foso de un ascensor en instalaciones nuevas?",
+      "expected_answer": "La EN 81-20 exige un espacio mínimo libre en el foso para permitir la protección del personal de mantenimiento."
+    },
+    {
+      "id": "tp3",
+      "question": "¿Cuál es el rango de carga permitido para un ascensor con cabina de 1 metro cuadrado?",
+      "expected_answer": "El rango típico es de 320 kg, basado en una carga nominal estándar de 1 persona por cada 0,125 m²."
+    }
+  ],
+  "ambiguous_or_error_handling": [
+    {
+      "id": "ae1",
+      "question": "¿Qué sucede si un ascensor no funciona?",
+      "expected_answer": "Depende de la causa. Puede deberse a una avería, a mantenimiento o a un fallo de energía. El protocolo incluye evaluación y asistencia técnica."
+    },
+    {
+      "id": "ae2",
+      "question": "¿Es seguro usar un ascensor viejo?",
+      "expected_answer": "Depende del mantenimiento, inspecciones y actualizaciones a normativa. Un ascensor antiguo puede ser seguro si cumple con las revisiones obligatorias."
+    }
+  ],
+  "comparison_standards": [
+    {
+      "id": "cs1",
+      "question": "¿En qué se diferencia la norma EN 81-20 de la ASME A17.1 en cuanto a accesibilidad?",
+      "expected_answer": "La EN 81-20 incluye requisitos europeos de accesibilidad para personas con movilidad reducida, mientras que la A17.1 se rige por criterios del ADA en EE.UU."
+    },
+    {
+      "id": "cs2",
+      "question": "¿Los requisitos de puertas de ascensores son iguales en Europa y Estados Unidos?",
+      "expected_answer": "No. La norma EN 81 exige puertas automáticas con cierre forzado, mientras que la A17.1 permite mayor flexibilidad según el tipo de instalación."
+    }
+  ]
+}

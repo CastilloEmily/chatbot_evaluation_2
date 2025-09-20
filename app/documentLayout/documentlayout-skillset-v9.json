@@ -1,0 +1,103 @@
+{
+  "@odata.etag": "\"0x8DDBA2ACA31513F\"",
+  "name": "documentlayout-skillset-v9",
+  "description": "only document layout with markdown outputs test separate sections",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Util.DocumentIntelligenceLayoutSkill",
+      "name": "#1",
+      "description": "Analizar el layout del documento",
+      "context": "/document",
+      "outputMode": "oneToMany",
+      "markdownHeaderDepth": "h6",
+      "outputFormat": "markdown",
+      "extractionOptions": [
+        "images"
+      ],
+      "inputs": [
+        {
+          "name": "file_data",
+          "source": "/document/file_data",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "markdown_document",
+          "targetName": "layout_markdown_document"
+        },
+        {
+          "name": "normalized_images",
+          "targetName": "layout_normalized_images"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Vision.OcrSkill",
+      "name": "#2",
+      "description": "Extraer texto impreso de imágenes",
+      "context": "/document/layout_normalized_images/*",
+      "lineEnding": "Space",
+      "defaultLanguageCode": "es",
+      "detectOrientation": true,
+      "inputs": [
+        {
+          "name": "image",
+          "source": "/document/layout_normalized_images/*",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "targetName": "ocr_text"
+        }
+      ]
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Vision.ImageAnalysisSkill",
+      "name": "#3",
+      "description": "Analizar contenido visual de las imágenes",
+      "context": "/document/layout_normalized_images/*",
+      "defaultLanguageCode": "en",
+      "visualFeatures": [
+        "Tags",
+        "Description",
+        "Categories",
+        "Objects"
+      ],
+      "details": [],
+      "inputs": [
+        {
+          "name": "image",
+          "source": "/document/layout_normalized_images/*",
+          "inputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "name": "tags",
+          "targetName": "image_tags"
+        },
+        {
+          "name": "description",
+          "targetName": "image_description"
+        },
+        {
+          "name": "categories",
+          "targetName": "image_categories"
+        },
+        {
+          "name": "objects",
+          "targetName": "image_objects"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.AIServicesByKey",
+    "description": "Conexión a Azure AI multi‑service en East US 2",
+    "key": "<redacted>",
+    "subdomainUrl": "https://multiservice-ric.cognitiveservices.azure.com/"
+  }
+}

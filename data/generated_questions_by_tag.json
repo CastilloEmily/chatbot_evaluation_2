@@ -1,0 +1,150 @@
+{
+  "close_question": [
+    {
+      "id": "cl1",
+      "query": "¿Se debe proporcionar un interruptor de parada de emergencia en los ascensores de pasajeros?",
+      "expected_answer": "No. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "cl2",
+      "query": "¿Debe un interruptor de parada en el foso cumplir con los requisitos de 2.26.2.5(a), (b) y (c)?",
+      "expected_answer": "Sí. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "cl3",
+      "query": "¿Debe un elevador tener un dispositivo para detectar una condición de exceso de velocidad antes de la operación del interruptor de exceso de velocidad del gobernador?",
+      "expected_answer": "Sí. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "cl4",
+      "query": "¿Debe un interruptor de parada de emergencia estar ubicado en o adyacente a cada panel de operación del carro en los elevadores de carga?",
+      "expected_answer": "Sí. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "cl5",
+      "query": "¿Debe un interruptor de parada de emergencia tener un mango o botón rojo?",
+      "expected_answer": "Sí. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "cl6",
+      "query": "¿Debe un interruptor de parada de emergencia estar provisto en el pozo de cada elevador?",
+      "expected_answer": "Sí. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "cl7",
+      "query": "¿Se permite un medio de accionamiento común para el dispositivo de detección de exceso de velocidad y el interruptor de exceso de velocidad del gobernador?",
+      "expected_answer": "Sí. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "cl8",
+      "query": "¿Debe un interruptor de parada de emergencia en un elevador de carga tener manijas o botones de operación rojos?",
+      "expected_answer": "Sí. [A17.1_2013.pdf]"
+    }
+  ],
+  "technical_precision": [
+    {
+      "id": "te9",
+      "query": "¿Qué requisitos debe cumplir el dispositivo de detección de exceso de velocidad en un ascensor, según la normativa?",
+      "expected_answer": "Según la normativa, el dispositivo de detección de exceso de velocidad en un ascensor debe cumplir con los siguientes requisitos:\n1. Debe detectar una condición de exceso de velocidad antes e independientemente de la operación del interruptor de exceso de velocidad del gobernador.\n2. Se permite un medio de activación común (por ejemplo, un eje o polea del gobernador) que no sea físicamente parte de los dispositivos de detección de velocidad para la activación tanto del dispositivo de detección de exceso de velocidad como del interruptor de exceso de velocidad del gobernador.\n3. Se permite un medio de montaje común para el dispositivo de detección de velocidad del dispositivo de detección de exceso de velocidad y el interruptor de exceso de velocidad del gobernador.\n4. Este dispositivo debe causar que se retire la energía del armadura del motor de la máquina de conducción del ascensor y del freno de la máquina. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "te10",
+      "query": "¿Cuáles son los requisitos para el interruptor de parada de emergencia en los ascensores de carga, según la normativa?",
+      "expected_answer": "Según la normativa, los requisitos para el interruptor de parada de emergencia en los ascensores de carga son los siguientes:\n1. Debe ser del tipo que se abre y cierra manualmente.\n2. Debe tener manijas o botones de operación de color rojo.\n3. Debe estar marcado de manera conspicua y permanente con la palabra \"STOP\" y debe indicar las posiciones \"STOP\" y \"RUN\".\n4. Al estar abierto (en posición \"STOP\"), debe causar que se retire la energía eléctrica del motor de la máquina de conducción del ascensor y del freno.\n5. Mientras esté abierto, debe causar que el dispositivo audible suene, conforme a la sección 2.27.1.2.\n6. No se debe proporcionar un interruptor de parada de emergencia en los ascensores de pasajeros, pero sí en los ascensores de carga, y debe estar ubicado en o adyacente a cada panel de operación del coche. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "te11",
+      "query": "¿Qué requisitos debe cumplir un dispositivo de detección de exceso de velocidad en un ascensor según la normativa mencionada?",
+      "expected_answer": "Según la normativa, los ascensores deben estar equipados con un dispositivo que detecte una condición de exceso de velocidad antes e independientemente de la operación del interruptor de exceso de velocidad del gobernador. Se permite un medio de activación común (por ejemplo, un eje o polea del gobernador) que no sea físicamente parte de los dispositivos de detección de velocidad para la activación tanto del dispositivo de detección de exceso de velocidad como del interruptor de exceso de velocidad del gobernador. Además, se permite un medio de montaje común para el dispositivo de detección de exceso de velocidad y el interruptor de exceso de velocidad del gobernador. Este dispositivo debe causar la eliminación de la energía del motor del ascensor y del freno de la máquina. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "te12",
+      "query": "¿Cuáles son las características y requisitos de un interruptor de parada de emergencia en un ascensor de carga según la normativa mencionada?",
+      "expected_answer": "La normativa establece que en todos los ascensores de carga debe proporcionarse un interruptor de parada de emergencia en la cabina, ubicado en o adyacente a cada panel de operación de la cabina. Cuando el interruptor está en la posición abierta (\"STOP\"), debe causar la eliminación de la energía eléctrica del motor y del freno de la máquina del ascensor. Los interruptores de parada de emergencia deben ser del tipo de apertura y cierre manual, tener manijas o botones rojos, estar marcados de manera conspicua y permanente con la palabra \"STOP\" e indicar las posiciones \"STOP\" y \"RUN\". Además, mientras estén abiertos, deben causar que el dispositivo audible suene. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "te13",
+      "query": "¿Qué requisitos específicos debe cumplir un interruptor de parada en el foso de un ascensor según la normativa mencionada?",
+      "expected_answer": "Según la normativa, un interruptor de parada que cumpla con los requisitos de 2.26.2.5(a), (b) y (c) debe ser proporcionado en el foso de cada ascensor. Esto significa que el interruptor debe ser del tipo de apertura y cierre manual, tener manijas o botones rojos, y estar marcado de manera conspicua y permanente con la palabra \"STOP\", indicando las posiciones \"STOP\" y \"RUN\". [A17.1_2013.pdf]"
+    },
+    {
+      "id": "te14",
+      "query": "¿Qué sucede cuando se abre un interruptor de cuerda, cinta o cadena rota en un ascensor según la normativa mencionada?",
+      "expected_answer": "La normativa establece que los interruptores que deben abrirse en caso de falla de una cuerda, cinta o cadena deben ser proporcionados cuando lo requieran las secciones 2.25.2.3.2 o 2.25.4.1.7(b). Estos interruptores están diseñados para abrirse en caso de una falla en estos componentes, lo que interrumpe el funcionamiento del ascensor para prevenir accidentes o daños adicionales. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "te15",
+      "query": "¿Qué requisitos deben cumplir los interruptores de parada de emergencia en los ascensores de carga según la normativa?",
+      "expected_answer": "Los interruptores de parada de emergencia en los ascensores de carga deben cumplir con los siguientes requisitos:\n(a) Ser del tipo que se abre y se cierra manualmente.\n(b) Tener manijas o botones de operación de color rojo.\n(c) Estar marcados de manera conspicua y permanente con la palabra \"STOP\", e indicar las posiciones \"STOP\" y \"RUN\".\n(d) Mientras estén abiertos, deben hacer sonar el dispositivo audible (según 2.27.1.2). [A17.1_2013.pdf]"
+    },
+    {
+      "id": "te16",
+      "query": "¿Qué condiciones deben cumplir los dispositivos de detección de exceso de velocidad en los ascensores para que se permita un medio de accionamiento común?",
+      "expected_answer": "Los dispositivos de detección de exceso de velocidad en los ascensores deben cumplir las siguientes condiciones para permitir un medio de accionamiento común:\n(a) El medio de accionamiento común (por ejemplo, un eje de gobernador o polea) no debe ser físicamente parte de los dispositivos de detección de velocidad.\n(b) Se permite un medio de montaje común para el dispositivo de detección de velocidad del dispositivo de detección de exceso de velocidad y el interruptor de exceso de velocidad del gobernador. [A17.1_2013.pdf]"
+    }
+  ],
+  "ambiguous_or_error_handling": [
+    {
+      "id": "am17",
+      "query": "¿Qué dispositivo debe estar presente en los ascensores de carga y no en los ascensores de pasajeros?",
+      "expected_answer": "Un interruptor de parada de emergencia debe estar presente en los ascensores de carga y no en los ascensores de pasajeros. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "am18",
+      "query": "¿Qué debe ocurrir cuando el interruptor de parada de emergencia está en la posición \"STOP\" en un ascensor de carga?",
+      "expected_answer": "Cuando el interruptor de parada de emergencia está en la posición \"STOP\", debe causar que se elimine la energía eléctrica del motor de la máquina de conducción del ascensor y del freno. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "am19",
+      "query": "¿Qué características deben tener los interruptores de parada de emergencia en los ascensores de carga?",
+      "expected_answer": "Los interruptores de parada de emergencia deben ser del tipo manualmente abierto y cerrado, tener manijas o botones rojos, estar marcados de manera conspicua y permanente con \"STOP\" e indicar las posiciones \"STOP\" y \"RUN\". [A17.1_2013.pdf]"
+    },
+    {
+      "id": "am20",
+      "query": "¿Dónde debe estar ubicado el interruptor de parada en el foso de un ascensor?",
+      "expected_answer": "El interruptor de parada en el foso de un ascensor debe cumplir con las especificaciones de 2.26.2.5(a), (b) y (c) y debe estar ubicado en el foso de cada ascensor. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "am21",
+      "query": "¿Qué dispositivo debe estar presente en todos los ascensores de carga y no en los ascensores de pasajeros?",
+      "expected_answer": "Un interruptor de parada de emergencia debe estar presente en todos los ascensores de carga y no en los ascensores de pasajeros. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "am22",
+      "query": "¿Qué debe suceder cuando se abre el interruptor de parada de emergencia en un ascensor de carga?",
+      "expected_answer": "Cuando se abre el interruptor de parada de emergencia en un ascensor de carga, la energía eléctrica debe ser removida del motor de la máquina de elevación y del freno. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "am23",
+      "query": "¿Dónde debe estar ubicado el interruptor de parada de emergencia en los ascensores de carga?",
+      "expected_answer": "El interruptor de parada de emergencia debe estar ubicado en o adyacente a cada panel de operación del carro en los ascensores de carga. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "am24",
+      "query": "¿Qué característica deben tener los interruptores de parada de emergencia en cuanto a su operación manual?",
+      "expected_answer": "Los interruptores de parada de emergencia deben ser del tipo que se abren y cierran manualmente. [A17.1_2013.pdf]"
+    }
+  ],
+  "comparison_standards": [
+    {
+      "id": "co25",
+      "query": "¿Cuál es la diferencia en la provisión de un dispositivo de parada de emergencia entre los elevadores de pasajeros y los elevadores de carga según las normas?",
+      "expected_answer": "Según las normas, un interruptor de parada de emergencia no debe ser proporcionado en los elevadores de pasajeros, mientras que en todos los elevadores de carga, debe ser proporcionado en la cabina y ubicado en o adyacente a cada panel de operación de la cabina. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "co26",
+      "query": "¿Qué requisitos deben cumplir los interruptores de parada en el foso y en la parte superior del coche del elevador?",
+      "expected_answer": "Los interruptores de parada en el foso y en la parte superior del coche del elevador deben cumplir con los requisitos de ser abiertos y cerrados manualmente, tener manijas o botones de operación rojos, estar marcados de manera conspicua y permanente con \"STOP\" e indicar las posiciones \"STOP\" y \"RUN\". [A17.1_2013.pdf]"
+    },
+    {
+      "id": "co27",
+      "query": "¿Qué diferencia existe entre la norma EN 81 y la A17 en cuanto a la provisión de un dispositivo de detección de exceso de velocidad en los ascensores?",
+      "expected_answer": "La norma EN 81 puede tener requisitos específicos sobre los dispositivos de detección de exceso de velocidad que no se mencionan en el contenido proporcionado, mientras que la norma A17 establece que los ascensores deben estar equipados con un dispositivo que detecte una condición de exceso de velocidad antes e independientemente de la operación del interruptor de exceso de velocidad del gobernador, permitiendo medios comunes de activación y montaje para ambos dispositivos. [A17.1_2013.pdf]"
+    },
+    {
+      "id": "co28",
+      "query": "¿Cómo se manejan los interruptores de parada de emergencia en los ascensores de pasajeros según las normas EN 81 y A17?",
+      "expected_answer": "Según la norma A17, no se debe proporcionar un interruptor de parada de emergencia en los ascensores de pasajeros, mientras que en los ascensores de carga sí se debe proporcionar y debe estar ubicado en o adyacente a cada panel de operación del coche. La norma EN 81 puede tener diferentes requisitos específicos para los interruptores de parada de emergencia en ascensores de pasajeros y de carga. [A17.1_2013.pdf]"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+weights:
+  close_question:
+    similarity: 0.1
+    groundedness: 0.1
+    relevance: 0.1
+    coherence: 0.1
+    fluency: 0.1
+    gpt_groundedness: 0.1
+    gpt_relevance: 0.1
+    gpt_coherence: 0.1
+    gpt_fluency: 0.1
+    gpt_similarity: 0.1
+
+  technical_precision:
+    similarity: 0.1
+    groundedness: 0.1
+    relevance: 0.1
+    coherence: 0.1
+    fluency: 0.1
+    gpt_groundedness: 0.1
+    gpt_relevance: 0.1
+    gpt_coherence: 0.1
+    gpt_fluency: 0.1
+    gpt_similarity: 0.1
+
+  ambiguous_or_error_handling:
+    similarity: 0.1
+    groundedness: 0.1
+    relevance: 0.1
+    coherence: 0.1
+    fluency: 0.1
+    gpt_groundedness: 0.1
+    gpt_relevance: 0.1
+    gpt_coherence: 0.1
+    gpt_fluency: 0.1
+    gpt_similarity: 0.1
+
+  comparison_standards:
+    similarity: 0.1
+    groundedness: 0.1
+    relevance: 0.1
+    coherence: 0.1
+    fluency: 0.1
+    gpt_groundedness: 0.1
+    gpt_relevance: 0.1
+    gpt_coherence: 0.1
+    gpt_fluency: 0.1
+    gpt_similarity: 0.1

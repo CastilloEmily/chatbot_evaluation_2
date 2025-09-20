@@ -1,0 +1,72 @@
+2025-06-02 09:40:39,174 [INFO] [root] Logging configurado. Archivo de log: logs\2025-06-02\2025-06-02_09-40-39.log
+2025-06-02 09:40:39,174 [INFO] [main] Inicio del programa principal
+2025-06-02 09:40:39,175 [INFO] [EmailReporter] Inicializando EmailReporter y cargando variables de entorno...
+2025-06-02 09:40:39,175 [INFO] [EmailReporter] Variables de entorno cargadas correctamente.
+2025-06-02 09:40:39,176 [INFO] [main] Inicio del proceso en modo: combinations
+2025-06-02 09:40:39,176 [INFO] [main] Generando combinaciones de parámetros desde: configs/settings_ranges.yaml
+2025-06-02 09:40:39,177 [INFO] [main] Cargando combinaciones de parámetros desde archivo YAML: configs/settings_ranges.yaml
+2025-06-02 09:40:39,182 [INFO] [main] Se generaron 64 combinaciones de parámetros.
+2025-06-02 09:40:39,185 [INFO] [change_settings] Inicio actualización settings de Web App 'ChatRic' en RG 'openAI', en subscription 'b29c9dac-08df-4427-9ddb-d50fca7bc22'
+2025-06-02 09:40:39,186 [INFO] [azure.identity._credentials.environment] No environment configuration found.
+2025-06-02 09:40:39,189 [INFO] [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use IMDS
+2025-06-02 09:40:39,190 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-02 09:40:40,938 [INFO] [azure.identity._credentials.chained] DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-02 09:40:40,938 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings/list?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e104c4c6-3f84-11f0-a911-24eb1694bf2d'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.3 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-02 09:40:41,105 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 400
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '154'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-failure-cause': 'REDACTED'
+    'x-ms-request-id': 'd90e0f19-572f-4d9d-987c-250f459ef7ad'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 30C3CEAD35F3464F9992C463EA713621 Ref B: MAD201130411060 Ref C: 2025-06-02T07:40:41Z'
+    'Date': 'Mon, 02 Jun 2025 07:40:40 GMT'
+2025-06-02 09:40:41,106 [ERROR] [change_settings] Error HTTP en Azure API: (InvalidSubscriptionId) The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22' is malformed or invalid.
+Code: InvalidSubscriptionId
+Message: The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22' is malformed or invalid.
+2025-06-02 09:40:41,106 [INFO] [EmailReporter] Iniciando envío de reporte por correo.
+2025-06-02 09:40:42,615 [INFO] [EmailReporter] ✅ Correo enviado con éxito.
+2025-06-02 09:40:42,616 [ERROR] [main] Error en la ejecución principal: (InvalidSubscriptionId) The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22' is malformed or invalid.
+Code: InvalidSubscriptionId
+Message: The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22' is malformed or invalid.
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 289, in main
+        update_webapp_settings(
+        ~~~~~~~~~~~~~~~~~~~~~~^
+            subscription_id=env_vars["SUBSCRIPTION_ID"],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            new_settings=combination
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\change_settins.py", line 99, in update_webapp_settings
+    raise e  # Deja que .main lo capture y lo reporte por email
+    ^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\change_settins.py", line 29, in update_webapp_settings
+    current_config = client.web_apps.list_application_settings(resource_group, webapp_name)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\core\tracing\decorator.py", line 119, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\evaluation\Lib\site-packages\azure\mgmt\web\v2024_04_01\operations\_web_apps_operations.py", line 19214, in list_application_settings
+    raise HttpResponseError(response=response, model=error, error_format=ARMErrorFormat)
+azure.core.exceptions.HttpResponseError: (InvalidSubscriptionId) The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22' is malformed or invalid.
+Code: InvalidSubscriptionId
+Message: The provided subscription identifier 'b29c9dac-08df-4427-9ddb-d50fca7bc22' is malformed or invalid.

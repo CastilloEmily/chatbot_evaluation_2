@@ -1,0 +1,11 @@
+2025-05-23 10:46:48,810 [INFO] Este es un log desde change_settings.py
+2025-05-23 10:46:48,810 [INFO] Iniciando proceso de actualización de settings de Web App...
+2025-05-23 10:46:51,771 [INFO] Configuración actual obtenida correctamente.
+2025-05-23 10:46:53,463 [INFO] Nuevas settings aplicadas correctamente.
+2025-05-23 10:46:54,033 [INFO] Reinicio de la Web App solicitado.
+2025-05-23 10:47:05,097 [INFO] Verificación completada. Todos los parámetros fueron aplicados correctamente.
+2025-05-23 10:47:05,108 [INFO] Iniciando proceso de actualización de settings de Web App...
+2025-05-23 10:47:08,140 [INFO] Configuración actual obtenida correctamente.
+2025-05-23 10:47:09,357 [INFO] Nuevas settings aplicadas correctamente.
+2025-05-23 10:47:09,983 [INFO] Reinicio de la Web App solicitado.
+2025-05-23 10:47:21,522 [ERROR] Error durante la actualización de settings: Setting AZURE_OPENAI_TEMPERATURE no se actualizó correctamente. Esperado: 0.0, Obtenido: 0.0

@@ -1,0 +1,20 @@
+2025-05-26 14:15:00,198 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_14-15-00.log
+2025-05-26 14:15:00,199 [INFO] [main] Inicio del programa principal
+2025-05-26 14:15:00,200 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 14:15:00,711 [INFO] [loader] Latencia: 0.460 s
+2025-05-26 14:15:00,712 [WARNING] [loader] Error 401: No autorizado.
+2025-05-26 14:15:00,712 [INFO] [evaluator] Creando QAEvaluator con model_config...
+2025-05-26 14:15:00,763 [INFO] [evaluator] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-26 14:15:00,768 [ERROR] [evaluator] Fallo en la evaluación o autenticación para pregunta 'cq1': (UserError) QAEvaluator: Either 'conversation' or individual inputs must be provided.
+2025-05-26 14:15:00,787 [ERROR] [main] Error en la ejecución principal: 'weighted_score'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 243, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 125, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 138, in evaluate_label
+    label_score = evaluate_question(question, config, label)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 188, in evaluate_question
+    weighted_scores.append(score["weighted_score"])
+                           ~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'weighted_score'

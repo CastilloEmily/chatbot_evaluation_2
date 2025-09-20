@@ -1,0 +1,23 @@
+2025-05-26 14:11:25,967 [INFO] [root] Logging configurado. Archivo de log: logs\2025-05-26\2025-05-26_14-11-25.log
+2025-05-26 14:11:25,968 [INFO] [main] Inicio del programa principal
+2025-05-26 14:11:25,969 [INFO] [main] Inicio del proceso de evaluación del chatbot.
+2025-05-26 14:11:26,304 [INFO] [loader] Latencia: 0.333 s
+2025-05-26 14:11:26,304 [WARNING] [loader] Error 401: No autorizado.
+2025-05-26 14:11:26,305 [INFO] [evaluator] Creando QAEvaluator con model_config...
+2025-05-26 14:11:26,316 [INFO] [evaluator] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-26 14:11:26,323 [ERROR] [evaluator] Fallo en la evaluación o autenticación para pregunta 'cq1': (UserError) QAEvaluator: Either 'conversation' or individual inputs must be provided.
+2025-05-26 14:11:26,323 [ERROR] [main] Error en la ejecución principal: No se encontró el archivo de pesos: metric_weights.yaml
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 242, in main
+    result = evaluate_combination(config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 125, in evaluate_combination
+    config_score = evaluate_label(label, questions, config)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 138, in evaluate_label
+    label_score = evaluate_question(question, config, label)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 173, in evaluate_question
+    result = compute_weighted_score(score)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 201, in compute_weighted_score
+    weights_data = load_metric_weights(weight_file_path)
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 62, in load_metric_weights
+    raise FileNotFoundError(f"No se encontró el archivo de pesos: {weight_file_path}")
+FileNotFoundError: No se encontró el archivo de pesos: metric_weights.yaml

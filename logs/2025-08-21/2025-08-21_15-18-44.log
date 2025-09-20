@@ -1,0 +1,416 @@
+2025-08-21 15:18:44,110 [INFO] [root] Logging configurado. Archivo de log: logs\2025-08-21\2025-08-21_15-18-44.log
+2025-08-21 15:18:44,110 [INFO] [main] Inicio del programa principal
+2025-08-21 15:18:44,112 [INFO] [EmailReporter] Inicializando EmailReporter y cargando variables de entorno...
+2025-08-21 15:18:44,112 [INFO] [EmailReporter] Variables de entorno cargadas correctamente.
+2025-08-21 15:18:44,112 [INFO] [main] Inicio del proceso en modo: current
+2025-08-21 15:18:44,112 [INFO] [main] Modo 'current' seleccionado. Actualizando configuración actual del Web App.
+2025-08-21 15:18:44,112 [INFO] [change_settings] Inicio actualización settings de Web App 'ChatRic' en RG 'openAI', en subscription 'b29c9dac-08df-4427-9ddb-d50fca7bc22f'
+2025-08-21 15:18:44,116 [INFO] [azure.identity._credentials.environment] No environment configuration found.
+2025-08-21 15:18:44,118 [INFO] [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use IMDS
+2025-08-21 15:18:44,119 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.13.4 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-08-21 15:18:45,973 [INFO] [azure.identity._credentials.chained] DefaultAzureCredential acquired a token from AzureCliCredential
+2025-08-21 15:18:45,973 [INFO] [azure.core.pipeline.policies.http_logging_policy] Request URL: 'https://management.azure.com/subscriptions/b29c9dac-08df-4427-9ddb-d50fca7bc22f/resourceGroups/openAI/providers/Microsoft.Web/sites/ChatRic/config/appsettings/list?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '5cd33756-7e91-11f0-9bc2-8c3b4a0af541'
+    'User-Agent': 'azsdk-python-azure-mgmt-web/8.0.0 Python/3.13.4 (Windows-11-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-08-21 15:18:47,288 [INFO] [azure.core.pipeline.policies.http_logging_policy] Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2689'
+    'Content-Type': 'application/json'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-request-id': 'a67896ec-e2d6-40ec-ae3d-4c4ebedbd09d'
+    'X-AspNet-Version': 'REDACTED'
+    'X-Powered-By': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-resource-requests': '799'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 601046171E1C45B7952E3B0626AD2142 Ref B: PAR611100605060 Ref C: 2025-08-21T13:18:46Z'
+    'Date': 'Thu, 21 Aug 2025 13:18:46 GMT'
+2025-08-21 15:18:47,289 [INFO] [change_settings] Configuración actual obtenida correctamente.
+2025-08-21 15:18:47,290 [INFO] [change_settings] Modo 'current' activado. No se aplicarán cambios.
+2025-08-21 15:18:47,290 [INFO] [main] Configuración actual del Web App: {'AUTH_CLIENT_SECRET': '', 'AZURE_COSMOSDB_ACCOUNT': '', 'AZURE_COSMOSDB_CONVERSATIONS_CONTAINER': 'conversations', 'AZURE_COSMOSDB_DATABASE': 'db_conversation_history', 'AZURE_COSMOSDB_MONGO_VCORE_CONNECTION_STRING': '', 'AZURE_COSMOSDB_MONGO_VCORE_CONTAINER': '', 'AZURE_COSMOSDB_MONGO_VCORE_CONTENT_COLUMNS': '', 'AZURE_COSMOSDB_MONGO_VCORE_DATABASE': '', 'AZURE_COSMOSDB_MONGO_VCORE_FILENAME_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_INDEX': '', 'AZURE_COSMOSDB_MONGO_VCORE_TITLE_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_URL_COLUMN': '', 'AZURE_COSMOSDB_MONGO_VCORE_VECTOR_COLUMNS': '', 'AZURE_OPENAI_EMBEDDING_ENDPOINT': '', 'AZURE_OPENAI_EMBEDDING_KEY': '', 'AZURE_OPENAI_EMBEDDING_NAME': '', 'AZURE_OPENAI_ENDPOINT': 'https://tke4o.openai.azure.com/', 'AZURE_OPENAI_MAX_TOKENS': '16384', 'AZURE_OPENAI_MODEL': 'tke4o', 'AZURE_OPENAI_MODEL_NAME': 'gpt-4o', 'AZURE_OPENAI_RESOURCE': 'tke4o', 'AZURE_OPENAI_STOP_SEQUENCE': '', 'AZURE_OPENAI_SYSTEM_MESSAGE': 'Mensaje sistema 2', 'AZURE_OPENAI_TEMPERATURE': '1.0', 'AZURE_OPENAI_TOP_P': '1.0', 'AZURE_SEARCH_CONTENT_COLUMNS': '', 'AZURE_SEARCH_ENABLE_IN_DOMAIN': 'false', 'AZURE_SEARCH_FILENAME_COLUMN': '', 'AZURE_SEARCH_INDEX': '', 'AZURE_SEARCH_KEY': '', 'AZURE_SEARCH_PERMITTED_GROUPS_COLUMN': '', 'AZURE_SEARCH_QUERY_TYPE': '', 'AZURE_SEARCH_SEMANTIC_SEARCH_CONFIG': '', 'AZURE_SEARCH_SERVICE': '', 'AZURE_SEARCH_STRICTNESS': '5', 'AZURE_SEARCH_TITLE_COLUMN': '', 'AZURE_SEARCH_TOP_K': '1000', 'AZURE_SEARCH_URL_COLUMN': '', 'AZURE_SEARCH_USE_SEMANTIC_SEARCH': 'false', 'AZURE_SEARCH_VECTOR_COLUMNS': '', 'DATASOURCE_TYPE': 'AzureCognitiveSearch', 'ELASTICSEARCH_CONTENT_COLUMNS': '', 'ELASTICSEARCH_EMBEDDING_MODEL_ID': '', 'ELASTICSEARCH_ENABLE_IN_DOMAIN': 'false', 'ELASTICSEARCH_ENCODED_API_KEY': '', 'ELASTICSEARCH_ENDPOINT': '', 'ELASTICSEARCH_FILENAME_COLUMN': '', 'ELASTICSEARCH_INDEX': '', 'ELASTICSEARCH_QUERY_TYPE': '', 'ELASTICSEARCH_STRICTNESS': '3', 'ELASTICSEARCH_TITLE_COLUMN': '', 'ELASTICSEARCH_TOP_K': '5', 'ELASTICSEARCH_URL_COLUMN': '', 'ELASTICSEARCH_VECTOR_COLUMNS': '', 'MONGODB_APP_NAME': '', 'MONGODB_COLLECTION_NAME': '', 'MONGODB_CONTENT_COLUMNS': '', 'MONGODB_DATABASE_NAME': '', 'MONGODB_ENABLE_IN_DOMAIN': 'false', 'MONGODB_ENDPOINT': '', 'MONGODB_FILENAME_COLUMN': '', 'MONGODB_INDEX_NAME': '', 'MONGODB_PASSWORD': '', 'MONGODB_STRICTNESS': '3', 'MONGODB_TITLE_COLUMN': '', 'MONGODB_TOP_K': '5', 'MONGODB_URL_COLUMN': '', 'MONGODB_USERNAME': '', 'MONGODB_VECTOR_COLUMNS': '', 'SCM_DO_BUILD_DURING_DEPLOYMENT': 'true', 'WEBSITE_HTTPLOGGING_RETENTION_DAYS': '2'}
+2025-08-21 15:18:52,785 [INFO] [loader] Latencia: 2.960 s
+2025-08-21 15:18:52,786 [INFO] [evaluator] [cl1] Creando QAEvaluator con model_config...
+2025-08-21 15:18:52,797 [INFO] [evaluator] [cl1] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:18:54,756 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:18:55,981 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:18:56,113 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:18:56,252 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:18:56,823 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:18:56,826 [INFO] [evaluator] [cl1] Evaluación completada correctamente.
+2025-08-21 15:18:56,826 [INFO] [main] [INFO] Cargando pesos de métricas desde: configs/metric_weights.yaml
+2025-08-21 15:18:56,829 [INFO] [main] Pregunta cl1 evaluada: 3.6 para la etiqueta 'close_question'
+2025-08-21 15:19:03,466 [INFO] [loader] Latencia: 2.702 s
+2025-08-21 15:19:03,469 [INFO] [evaluator] [cl2] Creando QAEvaluator con model_config...
+2025-08-21 15:19:03,482 [INFO] [evaluator] [cl2] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:19:05,180 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:06,435 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:07,879 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:08,062 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:08,129 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:08,131 [INFO] [evaluator] [cl2] Evaluación completada correctamente.
+2025-08-21 15:19:08,133 [INFO] [main] Pregunta cl2 evaluada: 3.6 para la etiqueta 'close_question'
+2025-08-21 15:19:13,634 [INFO] [loader] Latencia: 5.444 s
+2025-08-21 15:19:13,635 [INFO] [evaluator] [cl3] Creando QAEvaluator con model_config...
+2025-08-21 15:19:13,645 [INFO] [evaluator] [cl3] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:19:15,205 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:16,928 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:16,976 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:17,060 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:17,937 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:17,940 [INFO] [evaluator] [cl3] Evaluación completada correctamente.
+2025-08-21 15:19:17,941 [INFO] [main] Pregunta cl3 evaluada: 3.4 para la etiqueta 'close_question'
+2025-08-21 15:19:25,935 [INFO] [loader] Latencia: 5.052 s
+2025-08-21 15:19:25,937 [INFO] [evaluator] [cl4] Creando QAEvaluator con model_config...
+2025-08-21 15:19:25,948 [INFO] [evaluator] [cl4] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:19:27,761 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:28,802 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:29,119 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:29,470 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:30,176 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:30,179 [INFO] [evaluator] [cl4] Evaluación completada correctamente.
+2025-08-21 15:19:30,180 [INFO] [main] Pregunta cl4 evaluada: 3.6 para la etiqueta 'close_question'
+2025-08-21 15:19:34,555 [INFO] [loader] Latencia: 2.839 s
+2025-08-21 15:19:34,556 [INFO] [evaluator] [cl5] Creando QAEvaluator con model_config...
+2025-08-21 15:19:34,566 [INFO] [evaluator] [cl5] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:19:35,723 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:36,701 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:36,846 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:37,174 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:37,611 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:37,614 [INFO] [evaluator] [cl5] Evaluación completada correctamente.
+2025-08-21 15:19:37,615 [INFO] [main] Pregunta cl5 evaluada: 3.4 para la etiqueta 'close_question'
+2025-08-21 15:19:42,131 [INFO] [loader] Latencia: 2.859 s
+2025-08-21 15:19:42,133 [INFO] [evaluator] [cl6] Creando QAEvaluator con model_config...
+2025-08-21 15:19:42,143 [INFO] [evaluator] [cl6] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:19:43,814 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:45,053 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:45,162 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:45,847 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:46,073 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:46,077 [INFO] [evaluator] [cl6] Evaluación completada correctamente.
+2025-08-21 15:19:46,078 [INFO] [main] Pregunta cl6 evaluada: 3.6 para la etiqueta 'close_question'
+2025-08-21 15:19:51,687 [INFO] [loader] Latencia: 3.402 s
+2025-08-21 15:19:51,688 [INFO] [evaluator] [cl7] Creando QAEvaluator con model_config...
+2025-08-21 15:19:51,698 [INFO] [evaluator] [cl7] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:19:53,236 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:54,357 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:55,113 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:56,182 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:57,733 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:19:57,736 [INFO] [evaluator] [cl7] Evaluación completada correctamente.
+2025-08-21 15:19:57,738 [INFO] [main] Pregunta cl7 evaluada: 3.6 para la etiqueta 'close_question'
+2025-08-21 15:20:02,697 [INFO] [loader] Latencia: 3.135 s
+2025-08-21 15:20:02,699 [INFO] [evaluator] [cl8] Creando QAEvaluator con model_config...
+2025-08-21 15:20:02,708 [INFO] [evaluator] [cl8] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:20:04,297 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:05,821 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:06,204 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:06,325 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:06,694 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:06,697 [INFO] [evaluator] [cl8] Evaluación completada correctamente.
+2025-08-21 15:20:06,698 [INFO] [main] Pregunta cl8 evaluada: 3.6 para la etiqueta 'close_question'
+2025-08-21 15:20:20,075 [INFO] [loader] Latencia: 2.818 s
+2025-08-21 15:20:20,077 [INFO] [evaluator] [te9] Creando QAEvaluator con model_config...
+2025-08-21 15:20:20,087 [INFO] [evaluator] [te9] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:20:21,731 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:23,059 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:23,245 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:23,811 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:24,028 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:24,031 [INFO] [evaluator] [te9] Evaluación completada correctamente.
+2025-08-21 15:20:24,032 [INFO] [main] Pregunta te9 evaluada: 4.0 para la etiqueta 'technical_precision'
+2025-08-21 15:20:30,743 [INFO] [loader] Latencia: 2.771 s
+2025-08-21 15:20:30,745 [INFO] [evaluator] [te10] Creando QAEvaluator con model_config...
+2025-08-21 15:20:30,755 [INFO] [evaluator] [te10] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:20:32,390 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:33,692 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:33,917 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:33,964 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:36,032 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:36,035 [INFO] [evaluator] [te10] Evaluación completada correctamente.
+2025-08-21 15:20:36,036 [INFO] [main] Pregunta te10 evaluada: 3.8 para la etiqueta 'technical_precision'
+2025-08-21 15:20:44,449 [INFO] [loader] Latencia: 2.860 s
+2025-08-21 15:20:44,454 [INFO] [evaluator] [te11] Creando QAEvaluator con model_config...
+2025-08-21 15:20:44,469 [INFO] [evaluator] [te11] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:20:46,086 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:47,303 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:47,480 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:48,149 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:48,371 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:48,377 [INFO] [evaluator] [te11] Evaluación completada correctamente.
+2025-08-21 15:20:48,378 [INFO] [main] Pregunta te11 evaluada: 3.6 para la etiqueta 'technical_precision'
+2025-08-21 15:20:56,106 [INFO] [loader] Latencia: 3.406 s
+2025-08-21 15:20:56,109 [INFO] [evaluator] [te12] Creando QAEvaluator con model_config...
+2025-08-21 15:20:56,120 [INFO] [evaluator] [te12] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:20:57,831 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:58,744 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:20:59,160 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:00,192 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:02,358 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:02,361 [INFO] [evaluator] [te12] Evaluación completada correctamente.
+2025-08-21 15:21:02,362 [INFO] [main] Pregunta te12 evaluada: 3.2 para la etiqueta 'technical_precision'
+2025-08-21 15:21:10,274 [INFO] [loader] Latencia: 3.098 s
+2025-08-21 15:21:10,279 [INFO] [evaluator] [te13] Creando QAEvaluator con model_config...
+2025-08-21 15:21:10,291 [INFO] [evaluator] [te13] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:21:12,004 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:13,462 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:13,515 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:13,650 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:13,976 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:13,979 [INFO] [evaluator] [te13] Evaluación completada correctamente.
+2025-08-21 15:21:13,981 [INFO] [main] Pregunta te13 evaluada: 3.2 para la etiqueta 'technical_precision'
+2025-08-21 15:21:21,084 [INFO] [loader] Latencia: 3.452 s
+2025-08-21 15:21:21,087 [INFO] [evaluator] [te14] Creando QAEvaluator con model_config...
+2025-08-21 15:21:21,098 [INFO] [evaluator] [te14] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:21:22,757 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:23,928 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:24,218 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:25,068 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:28,237 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:28,241 [INFO] [evaluator] [te14] Evaluación completada correctamente.
+2025-08-21 15:21:28,242 [INFO] [main] Pregunta te14 evaluada: 3.2 para la etiqueta 'technical_precision'
+2025-08-21 15:21:36,111 [INFO] [loader] Latencia: 3.316 s
+2025-08-21 15:21:36,113 [INFO] [evaluator] [te15] Creando QAEvaluator con model_config...
+2025-08-21 15:21:36,123 [INFO] [evaluator] [te15] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:21:37,860 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:39,017 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:39,242 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:39,529 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:39,547 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:39,549 [INFO] [evaluator] [te15] Evaluación completada correctamente.
+2025-08-21 15:21:39,550 [INFO] [main] Pregunta te15 evaluada: 3.8 para la etiqueta 'technical_precision'
+2025-08-21 15:21:46,657 [INFO] [loader] Latencia: 3.473 s
+2025-08-21 15:21:46,660 [INFO] [evaluator] [te16] Creando QAEvaluator con model_config...
+2025-08-21 15:21:46,670 [INFO] [evaluator] [te16] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:21:48,248 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:49,347 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:49,523 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:49,940 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:50,153 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:50,156 [INFO] [evaluator] [te16] Evaluación completada correctamente.
+2025-08-21 15:21:50,157 [INFO] [main] Pregunta te16 evaluada: 3.4 para la etiqueta 'technical_precision'
+2025-08-21 15:21:55,584 [INFO] [loader] Latencia: 2.932 s
+2025-08-21 15:21:55,586 [INFO] [evaluator] [am17] Creando QAEvaluator con model_config...
+2025-08-21 15:21:55,595 [INFO] [evaluator] [am17] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:21:56,736 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:57,868 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:57,962 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:58,272 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:58,959 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:21:58,963 [INFO] [evaluator] [am17] Evaluación completada correctamente.
+2025-08-21 15:21:58,964 [INFO] [main] Pregunta am17 evaluada: 2.8 para la etiqueta 'ambiguous_or_error_handling'
+2025-08-21 15:22:04,089 [INFO] [loader] Latencia: 2.507 s
+2025-08-21 15:22:04,091 [INFO] [evaluator] [am18] Creando QAEvaluator con model_config...
+2025-08-21 15:22:04,100 [INFO] [evaluator] [am18] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:22:05,672 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:06,933 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:07,656 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:08,194 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:08,311 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:08,313 [INFO] [evaluator] [am18] Evaluación completada correctamente.
+2025-08-21 15:22:08,314 [INFO] [main] Pregunta am18 evaluada: 3.8 para la etiqueta 'ambiguous_or_error_handling'
+2025-08-21 15:22:16,111 [INFO] [loader] Latencia: 2.840 s
+2025-08-21 15:22:16,114 [INFO] [evaluator] [am19] Creando QAEvaluator con model_config...
+2025-08-21 15:22:16,127 [INFO] [evaluator] [am19] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:22:17,688 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:18,874 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:18,897 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:19,627 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:19,692 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:19,696 [INFO] [evaluator] [am19] Evaluación completada correctamente.
+2025-08-21 15:22:19,697 [INFO] [main] Pregunta am19 evaluada: 3.8 para la etiqueta 'ambiguous_or_error_handling'
+2025-08-21 15:22:25,035 [INFO] [loader] Latencia: 3.313 s
+2025-08-21 15:22:25,038 [INFO] [evaluator] [am20] Creando QAEvaluator con model_config...
+2025-08-21 15:22:25,049 [INFO] [evaluator] [am20] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:22:26,143 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:27,198 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:27,290 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:27,929 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:28,544 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:28,547 [INFO] [evaluator] [am20] Evaluación completada correctamente.
+2025-08-21 15:22:28,548 [INFO] [main] Pregunta am20 evaluada: 3.6 para la etiqueta 'ambiguous_or_error_handling'
+2025-08-21 15:22:31,515 [INFO] [loader] Latencia: 2.158 s
+2025-08-21 15:22:31,517 [INFO] [evaluator] [am21] Creando QAEvaluator con model_config...
+2025-08-21 15:22:31,528 [INFO] [evaluator] [am21] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:22:33,026 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:33,987 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:33,999 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:34,261 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:35,005 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:35,008 [INFO] [evaluator] [am21] Evaluación completada correctamente.
+2025-08-21 15:22:35,009 [INFO] [main] Pregunta am21 evaluada: 2.8 para la etiqueta 'ambiguous_or_error_handling'
+2025-08-21 15:22:41,066 [INFO] [loader] Latencia: 3.141 s
+2025-08-21 15:22:41,068 [INFO] [evaluator] [am22] Creando QAEvaluator con model_config...
+2025-08-21 15:22:41,078 [INFO] [evaluator] [am22] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:22:42,170 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:43,562 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:43,750 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:43,860 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:44,470 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:44,473 [INFO] [evaluator] [am22] Evaluación completada correctamente.
+2025-08-21 15:22:44,474 [INFO] [main] Pregunta am22 evaluada: 3.4 para la etiqueta 'ambiguous_or_error_handling'
+2025-08-21 15:22:48,820 [INFO] [loader] Latencia: 2.641 s
+2025-08-21 15:22:48,822 [INFO] [evaluator] [am23] Creando QAEvaluator con model_config...
+2025-08-21 15:22:48,832 [INFO] [evaluator] [am23] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:22:50,454 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:51,475 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:51,625 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:51,882 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:52,457 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:52,459 [INFO] [evaluator] [am23] Evaluación completada correctamente.
+2025-08-21 15:22:52,460 [INFO] [main] Pregunta am23 evaluada: 3.0 para la etiqueta 'ambiguous_or_error_handling'
+2025-08-21 15:22:56,594 [INFO] [loader] Latencia: 2.689 s
+2025-08-21 15:22:56,597 [INFO] [evaluator] [am24] Creando QAEvaluator con model_config...
+2025-08-21 15:22:56,611 [INFO] [evaluator] [am24] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:22:57,718 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:58,838 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:59,039 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:59,349 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:59,376 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:22:59,379 [INFO] [evaluator] [am24] Evaluación completada correctamente.
+2025-08-21 15:22:59,380 [INFO] [main] Pregunta am24 evaluada: 3.4 para la etiqueta 'ambiguous_or_error_handling'
+2025-08-21 15:23:09,626 [INFO] [loader] Latencia: 2.427 s
+2025-08-21 15:23:09,629 [INFO] [evaluator] [co25] Creando QAEvaluator con model_config...
+2025-08-21 15:23:09,641 [INFO] [evaluator] [co25] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:23:11,210 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:12,706 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:12,714 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:13,296 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:13,569 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:13,572 [INFO] [evaluator] [co25] Evaluación completada correctamente.
+2025-08-21 15:23:13,573 [INFO] [main] Pregunta co25 evaluada: 3.6 para la etiqueta 'comparison_standards'
+2025-08-21 15:23:21,690 [INFO] [loader] Latencia: 2.890 s
+2025-08-21 15:23:21,692 [INFO] [evaluator] [co26] Creando QAEvaluator con model_config...
+2025-08-21 15:23:21,704 [INFO] [evaluator] [co26] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:23:23,866 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:25,344 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:25,424 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:25,878 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:25,980 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:25,983 [INFO] [evaluator] [co26] Evaluación completada correctamente.
+2025-08-21 15:23:25,984 [INFO] [main] Pregunta co26 evaluada: 4.0 para la etiqueta 'comparison_standards'
+2025-08-21 15:23:35,537 [INFO] [loader] Latencia: 3.476 s
+2025-08-21 15:23:35,541 [INFO] [evaluator] [co27] Creando QAEvaluator con model_config...
+2025-08-21 15:23:35,554 [INFO] [evaluator] [co27] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:23:37,233 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:38,363 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:38,745 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:38,978 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:39,222 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:39,225 [INFO] [evaluator] [co27] Evaluación completada correctamente.
+2025-08-21 15:23:39,226 [INFO] [main] Pregunta co27 evaluada: 4.0 para la etiqueta 'comparison_standards'
+2025-08-21 15:23:46,431 [INFO] [loader] Latencia: 3.249 s
+2025-08-21 15:23:46,433 [INFO] [evaluator] [co28] Creando QAEvaluator con model_config...
+2025-08-21 15:23:46,442 [INFO] [evaluator] [co28] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-08-21 15:23:48,037 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:49,318 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:49,739 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:50,111 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:50,359 [INFO] [httpx] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-08-21 15:23:50,362 [INFO] [evaluator] [co28] Evaluación completada correctamente.
+2025-08-21 15:23:50,363 [INFO] [main] Pregunta co28 evaluada: 3.6 para la etiqueta 'comparison_standards'
+2025-08-21 15:23:50,403 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,404 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,404 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,404 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,404 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,404 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,405 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,405 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,405 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,405 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,405 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,406 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,406 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,406 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,406 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,406 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,406 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,407 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,408 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,408 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,408 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,408 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,408 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,408 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,409 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,409 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,409 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,409 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,409 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,409 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,410 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,411 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,412 [WARNING] [main] Línea inválida en output_path_by_combination; se ignora.
+2025-08-21 15:23:50,413 [INFO] [EmailReporter] Iniciando envío de reporte por correo.
+2025-08-21 15:23:50,413 [INFO] [EmailReporter] Cargando archivo JSON desde: results\2025-08-21_15-18-44\2025-08-21_15-18-44_by_combination.json
+2025-08-21 15:23:50,413 [INFO] [EmailReporter] Archivo JSON cargado correctamente. Registros totales: 0
+2025-08-21 15:23:50,413 [ERROR] [main] Error en la ejecución principal: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 360, in main
+    reporter.send_report(args.mode, output_path_by_combination, elapsed)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\utils\create_report.py", line 111, in send_report
+    best_config = top_10[0]
+                  ~~~~~~^^^
+IndexError: list index out of range
+2025-08-21 15:23:50,414 [INFO] [EmailReporter] Iniciando envío de reporte por correo.
+2025-08-21 15:23:52,075 [INFO] [EmailReporter] ✅ Correo enviado con éxito.

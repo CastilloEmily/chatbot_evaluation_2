@@ -1,0 +1,34 @@
+{
+  "@odata.context": "https://search-ric-uat-v2.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DDBF7A3F167817\"",
+  "name": "documentlayout-indexer-v20",
+  "description": null,
+  "dataSourceName": "chatric-idx-datasource-v3",
+  "skillsetName": "documentlayout-skillset-v20",
+  "targetIndexName": "documentlayout-index-v20",
+  "disabled": null,
+  "schedule": {
+    "interval": "P1D",
+    "startTime": "2025-06-26T10:16:42.734Z"
+  },
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "configuration": {
+      "dataToExtract": "contentAndMetadata",
+      "allowSkillsetToReadFileData": true,
+      "parsingMode": "default"
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "document_id",
+      "mappingFunction": null
+    }
+  ],
+  "outputFieldMappings": [],
+  "cache": null,
+  "encryptionKey": null
+}

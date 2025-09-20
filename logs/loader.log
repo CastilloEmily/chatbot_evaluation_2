@@ -1,0 +1,22 @@
+2025-05-21 14:02:41,923 [INFO] Creando QAEvaluator con model_config...
+2025-05-21 14:02:41,998 [INFO] QAEvaluator creado correctamente. Iniciando evaluación...
+2025-05-21 14:02:43,763 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 14:02:44,575 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 14:02:44,722 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 14:02:44,777 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 14:02:45,121 [INFO] HTTP Request: POST https://ea-shared-ai-serviceplan-01-prod.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-05-21 14:02:45,124 [INFO] Evaluación completada para pregunta 'test1'.
+2025-05-21 14:02:45,125 [INFO] Inicio del proceso de evaluación del chatbot.
+2025-05-21 14:02:45,139 [ERROR] Error en la ejecución principal: response_generator() missing 1 required positional argument: 'config'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 32, in main
+    for qid, label, question, expected, actual, context in response_generator(questions_by_label, auth_mode):
+                                                           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: response_generator() missing 1 required positional argument: 'config'
+2025-05-21 14:07:53,877 [INFO] Inicio del proceso de evaluación del chatbot.
+2025-05-21 14:07:53,895 [ERROR] Error en la ejecución principal: response_generator() missing 1 required positional argument: 'config'
+Traceback (most recent call last):
+  File "C:\Users\CASTILLOEMILYGABRIEL\OneDrive - TK Elevator\Documentos\chatbot_evaluation\app\main.py", line 31, in main
+    for qid, label, question, expected, actual, context in response_generator(questions_by_label, auth_mode):
+                                                           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: response_generator() missing 1 required positional argument: 'config'
